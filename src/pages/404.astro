@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+<Layout
+  title="Page Not Found"
+  description="The page you are looking for does not exist. Return to Hanfu Dress Guide to explore traditional Chinese Hanfu styles, dynasties, and buying guides."
+  noindex={true}
+>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Hanfu Dress Guide home">Hanfu Dress Guide</a>
+      <div class="nav-links">
+        <a href="/#styles">Styles</a>
+        <a href="/#dynasties">Dynasties</a>
+        <a href="/#how-to-wear">How to Wear</a>
+        <a href="/#buy">Buying Guide</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section" style="text-align:center; padding:6rem 1.5rem;">
+    <div class="container-narrow">
+      <h1 style="font-size:3rem; margin-bottom:1rem;">404</h1>
+      <p style="font-size:1.25rem; color:var(--color-muted); margin-bottom:2rem;">
+        The page you are looking for does not exist or has been moved.
+      </p>
+      <p style="margin-bottom:2.5rem;">
+        Explore our guides to traditional Chinese Hanfu:
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center;">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="/#styles" class="btn btn-outline">Hanfu Styles</a>
+        <a href="/#dynasties" class="btn btn-outline">Dynasty Guide</a>
+        <a href="/#buy" class="btn btn-outline">Buying Guide</a>
+      </div>
+    </div>
+  </main>
+
+</Layout>

@@ -1,0 +1,117 @@
+---
+const {
+  title,
+  description,
+  canonicalUrl = "https://dresses-hanfu.com",
+  imageUrl = "/images/hanfu-og.jpg",
+  breadcrumbs = null,
+  articleSchema = null,
+  noindex = false,
+} = Astro.props;
+const fullTitle = title ? title + " | Hanfu Guide" : "Traditional Chinese Hanfu: Complete 2026 Guide";
+const fullDescription = description || "Discover authentic Hanfu dresses: styles by dynasty, how-to-wear guides, outfit inspiration, and trusted buying recommendations. Your complete hanfu dress resource.";
+const baseUrl = Astro.site ?? "https://dresses-hanfu.com";
+const fullImageUrl = imageUrl.startsWith("http") ? imageUrl : baseUrl + imageUrl;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"}>
+  <title>{fullTitle}</title>
+  <meta name="description" content={fullDescription}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={fullDescription}>
+  <meta property="og:image" content={fullImageUrl}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Hanfu Dress Guide">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={fullDescription}>
+  <meta name="twitter:image" content={fullImageUrl}>
+
+  <!-- Canonical -->
+  {!noindex && <link rel="canonical" href={canonicalUrl}>}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD: WebSite -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hanfu Dress Guide",
+      "url": baseUrl,
+      "description": "The most complete guide to traditional Chinese Hanfu dresses: styles, dynasties, how to wear, and where to buy."
+    }
+  </script>
+
+  <!-- Schema.org JSON-LD: Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Hanfu Dress Guide",
+      "url": baseUrl,
+      "logo": baseUrl + "/favicon.svg",
+      "sameAs": [
+        "https://pinterest.com/hanfudressguide",
+        "https://instagram.com/hanfudressguide"
+      ]
+    }
+  </script>
+
+  <!-- Schema.org JSON-LD: BreadcrumbList -->
+  {breadcrumbs ? (
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
+          ...breadcrumbs.map((b, i) => ({
+            "@type": "ListItem",
+            "position": i + 2,
+            "name": b.name,
+            "item": b.url ? baseUrl + b.url : undefined,
+          })).filter(b => b.item),
+        ],
+      })}
+    </script>
+  ) : null}
+
+  <!-- Schema.org JSON-LD: Article -->
+  {articleSchema ? (
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title || "Hanfu Dress Guide",
+        "description": fullDescription,
+        "url": canonicalUrl,
+        ...articleSchema,
+        "publisher": {
+          "@type": "Organization",
+          "name": "Hanfu Dress Guide",
+          "url": baseUrl,
+          "logo": { "@type": "ImageObject", "url": baseUrl + "/favicon.svg" }
+        }
+      })}
+    </script>
+  ) : null}
+</head>
+<body>
+  <slot />
+</body>
+</html>

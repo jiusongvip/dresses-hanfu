@@ -1,0 +1,31 @@
+# Hanfu Dress Guide - llms.txt
+
+> The most complete guide to traditional Chinese Hanfu dresses: styles, dynasties, how to wear, and where to buy.
+
+## Site Structure
+
+### Primary Pages
+- Home (Pillar): https://dresses-hanfu.com — Complete Hanfu guide covering all topics
+- Styles: https://dresses-hanfu.com/styles/tang | /styles/song | /styles/ming | /styles/modern | /styles/wedding | /styles/women | /styles/men | /styles/kids
+- Dynasties: https://dresses-hanfu.com/dynasty/han | /dynasty/tang | /dynasty/song | /dynasty/ming
+- Accessories: https://dresses-hanfu.com/accessories/hairpins | /accessories/fans | /accessories/shoes | /accessories/belts
+
+### Key Sections (on homepage)
+- https://dresses-hanfu.com/#styles — Explore Hanfu Styles
+- https://dresses-hanfu.com/#dynasties — Hanfu by Dynasty
+- https://dresses-hanfu.com/#how-to-wear — How to Wear Hanfu (5-step guide)
+- https://dresses-hanfu.com/#vs — Hanfu vs Kimono, Qipao, Hanbok
+- https://dresses-hanfu.com/#buy — Buying Guide & Pricing
+- https://dresses-hanfu.com/#travel — Hanfu City Guide (Xi'an, Hangzhou, Beijing, etc.)
+- https://dresses-hanfu.com/#faq — Frequently Asked Questions (15+ Q&A pairs)
+
+## About This Site
+- Name: Hanfu Dress Guide
+- Description: The most complete resource for traditional Chinese Hanfu dresses. Covers styles by dynasty, how-to-wear guides, outfit inspiration, trusted buying recommendations, and city-specific travel guides for renting Hanfu in China.
+- Audience: English-speaking readers interested in traditional Chinese clothing, Hanfu enthusiasts, travelers to China, cosplayers, and anyone curious about East Asian fashion history.
+- Content type: Informational guide with practical advice, historical context, and curated buying recommendations.
+
+## Contact
+- Email: hello@dresses-hanfu.com
+- Pinterest: https://pinterest.com/hanfudressguide
+- Instagram: https://instagram.com/hanfudressguide

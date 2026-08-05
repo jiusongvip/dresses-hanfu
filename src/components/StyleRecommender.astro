@@ -1,0 +1,179 @@
+---
+// Interactive Hanfu Style Recommender Quiz
+---
+
+<section class="section-tinted" aria-labelledby="quiz-heading" id="style-quiz">
+  <div class="container-narrow">
+    <h2 id="quiz-heading" style="margin-bottom: 0.5rem;">Which Hanfu Style Is Right for You?</h2>
+    <p class="section-subtitle" style="margin-bottom: 2.5rem;">Answer 3 quick questions to find your perfect match.</p>
+
+    <div id="quiz-root">
+      <div id="quiz-steps" class="quiz-steps">
+        <span class="quiz-step active" data-step="1">1</span>
+        <span class="quiz-step-divider"></span>
+        <span class="quiz-step" data-step="2">2</span>
+        <span class="quiz-step-divider"></span>
+        <span class="quiz-step" data-step="3">3</span>
+      </div>
+      <div id="quiz-question" class="quiz-question"></div>
+      <div id="quiz-options" class="quiz-options"></div>
+      <div id="quiz-result" class="quiz-result" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const quizData = [
+    {
+      question: "What is the main occasion?",
+      options: [
+        { label: "Casual daily wear", value: "daily", icon: "☀️", desc: "Comfortable, modern, easy to style" },
+        { label: "Festival or special event", value: "festival", icon: "🎉", desc: "Stand out at celebrations" },
+        { label: "Photoshoot or cosplay", value: "photo", icon: "📸", desc: "Maximum visual impact" },
+        { label: "Wedding", value: "wedding", icon: "💒", desc: "Your special day in tradition" }
+      ]
+    },
+    {
+      question: "What is your style vibe?",
+      options: [
+        { label: "Bold and dramatic", value: "bold", icon: "🔥", desc: "Turn heads, make a statement" },
+        { label: "Elegant and refined", value: "elegant", icon: "🌸", desc: "Subtle grace, timeless beauty" },
+        { label: "Structured and classic", value: "classic", icon: "🏛️", desc: "Clean lines, dignified presence" },
+        { label: "Easy and relaxed", value: "casual", icon: "🍃", desc: "Comfort first, effortless charm" }
+      ]
+    },
+    {
+      question: "What is your budget?",
+      options: [
+        { label: "Budget-friendly (under $50)", value: "low", icon: "💰", desc: "Great value entry-level pieces" },
+        { label: "Mid-range ($50 to $150)", value: "mid", icon: "💎", desc: "Quality fabrics and details" },
+        { label: "Premium ($150 plus)", value: "high", icon: "👑", desc: "Authentic silk, custom tailoring" },
+        { label: "No budget limit", value: "nolimit", icon: "✨", desc: "The finest craftsmanship available" }
+      ]
+    }
+  ];
+
+  const styleResults = {
+    "modern": {
+      name: "Modern Hanfu (Xin Hanfu)",
+      tagline: "Everyday Chinese Elegance",
+      desc: "Simplified traditional cuts in breathable cotton and linen. Cross-collar designs with modern waistlines make this the easiest entry point. Machine-washable and beginner-friendly. Budget: $40 to $80 for a quality starter set.",
+      link: "/styles/modern",
+      linkLabel: "Explore Modern Hanfu Styles"
+    },
+    "tang": {
+      name: "Tang Dynasty Hanfu",
+      tagline: "The Bold Golden Age",
+      desc: "High-waisted ruqun with dramatic wide sleeves in rich jewel tones. Silk brocade, gold embroidery, and flowing silhouettes that photograph beautifully. This is the most iconic Hanfu silhouette, perfect for making an entrance.",
+      link: "/styles/tang",
+      linkLabel: "Learn About Tang Dynasty Hanfu"
+    },
+    "song": {
+      name: "Song Dynasty Hanfu",
+      tagline: "Scholar's Quiet Grace",
+      desc: "Slim, layered beizi jackets over muted-tone ruqun. Refined and intellectual, Song Hanfu whispers rather than shouts. Ideal for those who appreciate understated beauty, tea ceremonies, and garden strolls.",
+      link: "#dynasties",
+      linkLabel: "Discover Song Dynasty Hanfu"
+    },
+    "ming": {
+      name: "Ming Dynasty Hanfu",
+      tagline: "Structured Timeless Dignity",
+      desc: "The most architecturally defined Hanfu: standing collars, horse-face skirts (mamianqun), and ornate brocade embroidery. Ming styles are beginner-friendly thanks to adjustable waist ties and a structured fit that flatters every body type.",
+      link: "/styles/ming",
+      linkLabel: "Explore Ming Dynasty Hanfu"
+    },
+    "wedding": {
+      name: "Wedding Hanfu",
+      tagline: "Red Robes for Your Forever Day",
+      desc: "The most elaborate Hanfu category: floor-length red silk robes embroidered with gold phoenix and dragon motifs. Tang-style bridal sets with dramatic trains or Ming-style structured bridal aoqun. Budget: $200 to $1,000 plus for a full set.",
+      link: "/styles/wedding",
+      linkLabel: "See Wedding Hanfu Inspiration"
+    }
+  };
+
+  function recommend(answers) {
+    const [occasion, vibe, budget] = answers;
+    if (occasion === "wedding") return "wedding";
+
+    const scores = { modern: 0, tang: 0, song: 0, ming: 0, wedding: 0 };
+
+    if (occasion === "daily") { scores.modern += 3; scores.ming += 2; scores.song += 1; }
+    else if (occasion === "festival") { scores.tang += 3; scores.song += 2; scores.ming += 1; }
+    else if (occasion === "photo") { scores.tang += 3; scores.song += 3; scores.ming += 1; }
+
+    if (vibe === "bold") { scores.tang += 3; scores.wedding += 1; }
+    else if (vibe === "elegant") { scores.song += 3; scores.ming += 2; scores.tang += 1; }
+    else if (vibe === "classic") { scores.ming += 3; scores.tang += 1; scores.song += 1; }
+    else if (vibe === "casual") { scores.modern += 3; scores.song += 1; }
+
+    if (budget === "low") { scores.modern += 3; scores.song += 1; }
+    else if (budget === "mid") { scores.modern += 2; scores.song += 2; scores.ming += 2; scores.tang += 1; }
+    else if (budget === "high") { scores.tang += 3; scores.ming += 3; scores.song += 1; scores.wedding += 3; }
+    else if (budget === "nolimit") { scores.tang += 3; scores.wedding += 4; scores.ming += 2; }
+
+    return Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+  }
+
+  let currentStep = 0;
+  let answers = [];
+
+  const questionEl = document.getElementById("quiz-question");
+  const optionsEl = document.getElementById("quiz-options");
+  const resultEl = document.getElementById("quiz-result");
+  const stepsEls = document.querySelectorAll(".quiz-step");
+
+  function renderStep(idx) {
+    const q = quizData[idx];
+    questionEl.innerHTML = '<h3 class="quiz-q-text">' + q.question + '</h3>';
+    optionsEl.innerHTML = q.options.map(function(opt) {
+      return '<button class="quiz-option" data-value="' + opt.value + '"><span class="quiz-option-icon">' + opt.icon + '</span><span class="quiz-option-text"><strong>' + opt.label + '</strong><small>' + opt.desc + '</small></span></button>';
+    }).join("");
+
+    optionsEl.querySelectorAll(".quiz-option").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        answers[idx] = btn.dataset.value;
+        if (idx < 2) {
+          currentStep++;
+          updateSteps();
+          renderStep(currentStep);
+        } else {
+          showResult();
+        }
+      });
+    });
+
+    updateSteps();
+  }
+
+  function updateSteps() {
+    stepsEls.forEach(function(el) {
+      var s = parseInt(el.dataset.step);
+      el.classList.remove("active", "done");
+      if (s === currentStep + 1) el.classList.add("active");
+      else if (s < currentStep + 1) el.classList.add("done");
+    });
+  }
+
+  function showResult() {
+    var key = recommend(answers);
+    var r = styleResults[key];
+    questionEl.style.display = "none";
+    optionsEl.style.display = "none";
+    document.getElementById("quiz-steps").style.display = "none";
+
+    resultEl.style.display = "block";
+    resultEl.innerHTML = '<div class="quiz-result-card"><div class="quiz-result-badge">Your Perfect Match</div><h3 class="quiz-result-name">' + r.name + '</h3><p class="quiz-result-tagline">' + r.tagline + '</p><p class="quiz-result-desc">' + r.desc + '</p><div class="quiz-result-actions"><a href="' + r.link + '" class="btn btn-primary">' + r.linkLabel + '</a><button class="btn btn-outline quiz-btn-outline-dark" id="quiz-restart">Try Again</button></div></div>';
+
+    document.getElementById("quiz-restart").addEventListener("click", function() {
+      currentStep = 0;
+      answers = [];
+      questionEl.style.display = "";
+      optionsEl.style.display = "";
+      document.getElementById("quiz-steps").style.display = "";
+      resultEl.style.display = "none";
+      renderStep(0);
+    });
+  }
+
+  renderStep(0);
+</script>

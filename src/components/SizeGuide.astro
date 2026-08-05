@@ -1,0 +1,165 @@
+---
+// Interactive Hanfu Size Converter and Measurement Guide
+---
+
+<section class="section" aria-labelledby="size-guide-heading" id="size-guide">
+  <div class="container-narrow">
+    <h2 id="size-guide-heading" class="section-title">Hanfu Size Guide: Western to Chinese Size Converter</h2>
+    <p class="section-subtitle" style="margin-bottom: 2.5rem;">Chinese sizing runs 1 to 2 sizes smaller than US/UK. Enter your measurements below to find your Hanfu size instantly.</p>
+
+    <div class="size-guide-grid">
+      <!-- Input Panel -->
+      <div class="size-input-panel">
+        <div class="size-unit-toggle">
+          <button class="size-unit-btn active" data-unit="in">Inches (in)</button>
+          <button class="size-unit-btn" data-unit="cm">Centimeters (cm)</button>
+        </div>
+
+        <div class="size-inputs">
+          <div class="size-field">
+            <label for="sg-bust">Bust / Chest</label>
+            <div class="size-input-wrap">
+              <input type="number" id="sg-bust" placeholder="e.g. 36" step="0.5" min="20" max="60">
+              <span class="size-unit-label">in</span>
+            </div>
+            <span class="size-measure-hint">Measure around the fullest part</span>
+          </div>
+          <div class="size-field">
+            <label for="sg-waist">Waist</label>
+            <div class="size-input-wrap">
+              <input type="number" id="sg-waist" placeholder="e.g. 28" step="0.5" min="18" max="55">
+              <span class="size-unit-label">in</span>
+            </div>
+            <span class="size-measure-hint">Measure at your natural waistline</span>
+          </div>
+          <div class="size-field">
+            <label for="sg-hips">Hips</label>
+            <div class="size-input-wrap">
+              <input type="number" id="sg-hips" placeholder="e.g. 38" step="0.5" min="22" max="65">
+              <span class="size-unit-label">in</span>
+            </div>
+            <span class="size-measure-hint">Measure around the widest point</span>
+          </div>
+          <div class="size-field">
+            <label for="sg-height">Height</label>
+            <div class="size-input-wrap">
+              <input type="number" id="sg-height" placeholder="e.g. 65" step="0.5" min="40" max="80">
+              <span class="size-unit-label">in</span>
+            </div>
+            <span class="size-measure-hint">Without shoes</span>
+          </div>
+        </div>
+
+        <button id="sg-calculate" class="btn btn-primary" style="width:100%;margin-top:1rem;">Find My Hanfu Size</button>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="size-result-panel" id="sg-result">
+        <div class="size-result-placeholder">
+          <div class="size-result-icon">📐</div>
+          <p>Enter your measurements and click "Find My Hanfu Size" to see your Chinese size match.</p>
+        </div>
+        <div class="size-result-output" id="sg-output" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- Quick Reference Table -->
+    <div class="size-ref-table-wrap" style="margin-top: 3rem;">
+      <h3 style="font-family: var(--font-display); font-weight: 500; margin-bottom: 1.25rem;">Quick Reference: Western to Chinese Hanfu Sizes</h3>
+      <div class="size-ref-table-scroll">
+        <table class="size-ref-table">
+          <thead>
+            <tr><th>US/UK</th><th>Bust (cm)</th><th>Waist (cm)</th><th>Hips (cm)</th><th>Height (cm)</th><th>Chinese Size</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>XS / 0-2</td><td>78-82</td><td>60-64</td><td>84-88</td><td>155-160</td><td><strong>S</strong></td><td>Often labeled as M in China</td></tr>
+            <tr><td>S / 4-6</td><td>82-86</td><td>64-68</td><td>88-92</td><td>160-165</td><td><strong>M</strong></td><td>Most common rental size</td></tr>
+            <tr><td>M / 8-10</td><td>86-92</td><td>68-74</td><td>92-98</td><td>165-170</td><td><strong>L</strong></td><td>Go up one for fitted styles</td></tr>
+            <tr><td>L / 12-14</td><td>92-100</td><td>74-82</td><td>98-106</td><td>170-175</td><td><strong>XL</strong></td><td>Check sleeve length</td></tr>
+            <tr><td>XL / 16-18</td><td>100-108</td><td>82-90</td><td>106-114</td><td>175-180</td><td><strong>2XL</strong></td><td>Custom sizing recommended</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.8125rem; color: var(--color-muted); margin-top: 0.75rem;">Hanfu uses sash-and-tie closures, so waist and bust have some flexibility. Shoulder and sleeve measurements are fixed — always check the seller is chart.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    var unitToggle = document.querySelectorAll(".size-unit-btn");
+    var unitLabels = document.querySelectorAll(".size-unit-label");
+    var inputs = {
+      bust: document.getElementById("sg-bust"),
+      waist: document.getElementById("sg-waist"),
+      hips: document.getElementById("sg-hips"),
+      height: document.getElementById("sg-height")
+    };
+    var calcBtn = document.getElementById("sg-calculate");
+    var resultPlaceholder = document.querySelector(".size-result-placeholder");
+    var resultOutput = document.getElementById("sg-output");
+    var currentUnit = "in";
+
+    unitToggle.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        unitToggle.forEach(function(b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        currentUnit = btn.dataset.unit;
+        unitLabels.forEach(function(l) { l.textContent = currentUnit; });
+        inputs.bust.placeholder = currentUnit === "in" ? "e.g. 36" : "e.g. 91";
+        inputs.waist.placeholder = currentUnit === "in" ? "e.g. 28" : "e.g. 71";
+        inputs.hips.placeholder = currentUnit === "in" ? "e.g. 38" : "e.g. 96";
+        inputs.height.placeholder = currentUnit === "in" ? "e.g. 65" : "e.g. 165";
+      });
+    });
+
+    function toCm(val) {
+      return currentUnit === "in" ? val * 2.54 : val;
+    }
+
+    function getChineseSize(bustCm, waistCm) {
+      var avg = (bustCm + waistCm) / 2;
+      if (avg < 82) return { size: "S", label: "Small", note: "Often labeled as M on Chinese platforms. Best for petite frames." };
+      if (avg < 90) return { size: "M", label: "Medium", note: "The most common Hanfu size. Available in most rental shops." };
+      if (avg < 100) return { size: "L", label: "Large", note: "Consider sizing up for fitted Tang or Ming dynasty styles." };
+      if (avg < 110) return { size: "XL", label: "Extra Large", note: "Check sleeve and shoulder measurements carefully." };
+      return { size: "2XL+", label: "2XL and above", note: "Custom sizing strongly recommended. Many Etsy and Taobao sellers offer made-to-measure." };
+    }
+
+    calcBtn.addEventListener("click", function() {
+      var bust = parseFloat(inputs.bust.value);
+      var waist = parseFloat(inputs.waist.value);
+      var hips = parseFloat(inputs.hips.value);
+      var height = parseFloat(inputs.height.value);
+
+      if (isNaN(bust) || isNaN(waist)) {
+        resultOutput.innerHTML = '<div class="size-result-error">Please enter at least your bust and waist measurements.</div>';
+        resultPlaceholder.style.display = "none";
+        resultOutput.style.display = "block";
+        return;
+      }
+
+      var bustCm = Math.round(toCm(bust));
+      var waistCm = Math.round(toCm(waist));
+      var hipsCm = hips ? Math.round(toCm(hips)) : null;
+      var heightCm = height ? Math.round(toCm(height)) : null;
+
+      var result = getChineseSize(bustCm, waistCm);
+
+      var html = '<div class="size-result-badge">' + result.size + '</div>';
+      html += '<p class="size-result-label">Chinese Hanfu Size: <strong>' + result.label + '</strong></p>';
+      html += '<p class="size-result-note">' + result.note + '</p>';
+      html += '<div class="size-result-details">';
+      html += '<div class="size-detail-row"><span>Bust</span><span>' + bustCm + ' cm</span></div>';
+      html += '<div class="size-detail-row"><span>Waist</span><span>' + waistCm + ' cm</span></div>';
+      if (hipsCm) html += '<div class="size-detail-row"><span>Hips</span><span>' + hipsCm + ' cm</span></div>';
+      if (heightCm) html += '<div class="size-detail-row"><span>Height</span><span>' + heightCm + ' cm</span></div>';
+      html += '</div>';
+      html += '<p style="font-size:0.8125rem;color:var(--color-muted);margin-top:1rem;">Hanfu is adjustable. Sash-and-tie closures give you about 2 to 4 cm of flexibility in the waist and bust. Focus on shoulder and sleeve fit for non-stretch fabrics like silk brocade.</p>';
+
+      resultOutput.innerHTML = html;
+      resultPlaceholder.style.display = "none";
+      resultOutput.style.display = "block";
+    });
+  })();
+</script>
