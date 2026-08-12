@@ -1,0 +1,91 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Beginner's Guide to Buying Hanfu"
+  description="Your first Hanfu purchase, done right: where to start, what style, what budget, how to size, seller, and the mistakes beginners make. Step-by-step starter plan."
+  canonicalUrl="https://dresses-hanfu.com/buying/beginner"
+  breadcrumbs={[{ name: "Buying", url: "/buying" }, { name: "Beginner's Guide", url: "/buying/beginner" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/buying/where-to-buy" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/buying" style="color:var(--color-accent);">Buying</a> &rsaquo; Beginner's Guide</p>
+          <h1>Beginner's Guide to Buying Hanfu</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Your first Hanfu purchase can feel overwhelming: dozens of styles, sizes that don't match your normal label, and a marketplace in three languages. Follow this plan and you'll land a set you'll actually wear.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>Step 1: Pick a Style You'll Really Wear</h2>
+          <p class="text-muted">
+            Not all Hanfu is equally beginner-friendly. We recommend the Ming dynasty style or modern Hanfu for a first purchase: both have structured fits, adjustable waists, and flattering silhouettes that don't require layering. Skip the full Tang drama (wide sleeve giants) until you want a statement piece.
+          </p>
+
+          <h2 style="margin-top:3rem;">Step 2: Measure Yourself in Centimeters</h2>
+          <p class="text-muted">
+            Your US/UK size is nearly useless — Chinese sizes run 1–2 smaller. Take bust, waist, hip, and height measurements in cm (see our <a href="/guides/sizing" style="color:var(--color-accent);">size guide</a>), and keep the numbers for every listing you compare.
+          </p>
+
+          <h2 style="margin-top:3rem;">Step 3: Decide Budget</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Tier</th><th>Range</th><th>What You Get</th><th>Where</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Entry</strong></td><td>$40–$100</td><td>Cotton or blend set, basic cut</td><td>NewMoonDance, Amazon, Etsy</td></tr>
+                <tr><td><strong>Mid</strong></td><td>$100–$300</td><td>Silk blend, good embroidery, accurate cut</td><td>Hanfu Story, mid Taobao studios</td></tr>
+                <tr><td><strong>Premium</strong></td><td>$300+</td><td>Full silk, hand embroidery, museum-quality</td><td>Nuwa, high-end studios</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Step 4: Choose the Sellers</h2>
+          <p class="text-muted">
+            For a first buy, the easy path is Hanfu Story or a curated Etsy shop: English checkout, honest material composition, and good returns politics. If you're comfortable with Taobao + agent, mid-range studios beat international prices. See <a href="/buying/where-to-buy" style="color:var(--color-accent);">where to buy</a> for the full depth.
+          </p>
+
+          <h2 style="margin-top:3rem;">Step 5: Read Every Size and Material Field</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li>Confirm the numeric cm bust/shoulder you're sending them.</li>
+            <li>Confirm the fabric composition — "polyester" is fine but no surprise.</li>
+            <li>Check sleeve width if you want wide-sleeve effect.</li>
+            <li>Confirm whether a belt/sash is included (many sets are skirt+top only).</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">Common Beginner Mistakes</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li>Buying "one-size" cheap cosplay and wondering why it looks bad.</li>
+            <li>Buying a Tang set as a first piece and struggling to style it.</li>
+            <li>Ignoring sleeve width / scams in favor of color.</li>
+            <li>Skipping the collar rule and wearing it in it left-over-right in public.</li>
+            <li>Buying the cheapest item — the fabric quality gap between $30 and $80 is enormous.</li>
+          </ul>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Ready? Buy Smart</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/buying/where-to-buy" class="btn btn-outline">Where to Buy Hanfu</a>
+              <a href="/buying/best-brands" class="btn btn-outline">Best Brands</a>
+              <a href="/buying/budget" class="btn btn-outline">Budget Hanfu</a>
+              <a href="/guides/sizing" class="btn btn-outline">Size Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

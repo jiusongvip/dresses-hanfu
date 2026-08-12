@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Hanfu vs Kimono: The Differences"
+  description="Hanfu vs Kimono compared: origins, cross-collar wrap, sleeves, obi vs sash, materials, and reason the two East Asian dresses differ. Clear side-by-side comparison."
+  canonicalUrl="https://dresses-hanfu.com/comparisons/kimono"
+  breadcrumbs={[{ name: "Comparisons", url: "/comparisons" }, { name: "Hanfu vs Kimono", url: "/comparisons/kimono" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/comparisons" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/comparisons" style="color:var(--color-accent);">Comparisons</a> &rsaquo; Hanfu vs Kimono</p>
+          <h1>Hanfu vs Kimono: What's Different, What's Shared</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Hanfu and kimono both descend from Han Chinese robes adapted by Japanese court culture. They look similar at a glance — crossed collars, layered wrap — but the details are quite different, and the differences matter if you're buying either.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>The Quick Answer</h2>
+          <p class="text-muted">
+            Hanfu is the traditional clothing of the Han Chinese, with a history stretching back millennia. The kimono is the traditional dress of Japan, historically influenced by Tang-dynasty Chinese robes, but it evolved its own distinct character after the 7th century. The clearest visual tell: the kimono's wide obi (sash belt) versus Hanfu's thin flat sash, plus the shaped, padded collar of the kimono versus the flat cross-over collar of Hanfu.
+          </p>
+
+          <h2 style="margin-top:3rem;">Side-by-Side Comparison</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Feature</th><th>Hanfu</th><th>Kimono</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Origin</strong></td><td>Han-dynasty China (c. 2nd century BCE)</td><td>Japan — heavily influenced by Tang-era robes after the 6th century</td></tr>
+                <tr><td><strong>Collar wrap</strong></td><td>Cross-over right over left, always</td><td>Cross-over felt over right in modern practice (men's reverse as "south side to heaven")</td></tr>
+                <tr><td><strong>Waist closure</strong></td><td>Thin silk tie / belt (sash)</td><td>Wide obi sash, layered and knotted</td></tr>
+                <tr><td><strong>Sleeves</strong></td><td>Varies by era — Tang wide, Song slim</td><td>Long, rectangular hanging sleeves (some so deep they almost reach the floor)</td></tr>
+                <tr><td><strong>Silhouette</strong></td><td>Flowing, the cloth volume layered</td><td>T-shaped, rectangular, often into a cylindrical silhouette</td></tr>
+                <tr><td><strong>Layering</strong></td><td>Rarely strictly layered</td><td>Multiple inner layers (nagajuban, etc.) as part of the ritual</td></tr>
+                <tr><td><strong>Footer</strong></td><td>Cloth shoes / boots</td><td>Tabi white socks with split toe + zori/geta clogs</td></tr>
+                <tr><td><strong>Occasion now</strong></td><td>Daily casual to formal festivals</td><td>Formal events, ceremonies, tea</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Why People Confuse Them</h2>
+          <p class="text-muted">
+            In 6th- and 7th-century Japan, court orders ordered robes modelled on Tang China. Some historic similarities are real: the cross-collar, layered construction, the rectangle-based cut. Over time the ottomane diverged into oval culture and round culture—it's a classic case of a shared ancestor with different descendants. A useful rough timeline: proto-kimono borrowed Tang-style basics, then Japan evolved them into the ba obi and box-like square.
+          </p>
+
+          <h2 style="margin-top:3rem;">One Easy Memory: The Belt</h2>
+          <p class="text-muted">
+            The single fastest way to tell them apart in a photo is the waist. Kimono = thick obi, often folded, with bow, over a layer of folded fabric. Hanfu = a sash about 4-8 cm wide, tied flat at the natural waist. See that difference and you'll never mix them up again.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">More Comparisons</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/comparisons/qipao" class="btn btn-outline">Hanfu vs Qipao</a>
+              <a href="/comparisons/hanbok" class="btn btn-outline">Hanfu vs Hanbok</a>
+              <a href="/comparisons/cheongsam" class="btn btn-outline">Hanfu vs Cheongsam</a>
+              <a href="/comparisons" class="btn btn-outline">All Comparisons</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

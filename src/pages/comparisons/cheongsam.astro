@@ -1,0 +1,71 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Hanfu vs Cheongsam: What's the Difference"
+  description="Hanfu vs cheongsam compared. Cheongsam is the western name for the qipao — a 20th-century fitted dress, completely different from ancient loose Hanfu."
+  canonicalUrl="https://dresses-hanfu.com/comparisons/cheongsam"
+  breadcrumbs={[{ name: "Comparisons", url: "/comparisons" }, { name: "Hanfu vs Cheongsam", url: "/comparisons/cheongsam" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/comparisons" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/comparisons" style="color:var(--color-accent);">Comparisons</a> &rsaquo; Hanfu vs Cheongsam</p>
+          <h1>Hanfu vs Cheongsam: Two Names, One Big Difference</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            "Cheongsam" is simply the Cantonese name for the qipao — same garment, two names, one of which traveled West through Hong Kong. So comparing Hanfu and cheongsam means comparing the loose ancient Hanfu with the fitted modern qipao.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>Why Two Names for the Qipao</h2>
+          <p class="text-muted">
+            Qipao (旗袍) is the Mandarin term, literally "banner gown," a reference to the Manchu banner system from the Qing dynasty. Cheongsam is the Cantonese pronunciation (saan), which spread to the West via Hong Kong and the overseas Chinese communities in the mid-20th century. Both names describe the identical short, fitted, buttoned dress popularized in 1920s-1950s Shanghai.
+          </p>
+
+          <h2 style="margin-top:3rem;">Hanfu vs Cheongsam (Qipao)</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Feature</th><th>Hanfu</th><th>Cheongsam (Qipao)</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Age</strong></td><td>3,000+ years old</td><td>About a century old</td></tr>
+                <tr><td><strong>Silhouette</strong></td><td>Loose, layered, flowing</td><td>Fitted, sheath-like</td></tr>
+                <tr><td><strong>Collar</strong></td><td>Cross-over wrapping</td><td>Standing high collar, frog buttons</td></tr>
+                <tr><td><strong>Waist</strong></td><td>Sash-tied, adjustable</td><td>Tailored, fixed</td></tr>
+                <tr><td><strong>Cuts</strong></td><td>Rectangles, zero-waste</td><td>Western-influenced contour cutting</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Bottom Line</h2>
+          <p class="text-muted">
+            If you see a form-fitting, buttoned, high-collar sheath dress, you're looking at a qipao/cheongsam — not Hanfu. If you see a loose, wrapped, crossed-collar robe with a sash, that's Hanfu. They represent two very different moments in Chinese dress history, and neither is a subset of the other.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">More Comparisons</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/comparisons/kimono" class="btn btn-outline">Hanfu vs Kimono</a>
+              <a href="/comparisons/qipao" class="btn btn-outline">Hanfu vs Qipao</a>
+              <a href="/comparisons/hanbok" class="btn btn-outline">Hanfu vs Hanbok</a>
+              <a href="/comparisons" class="btn btn-outline">All Comparisons</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

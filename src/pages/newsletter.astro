@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/global.css";
+---
+<Layout
+  title="Newsletter: Hanfu Guides, Deals & Culture"
+  description="Subscribe to the Hanfu Dress Guide newsletter for guides, style inspiration, brand drops, travel tips, and exclusive deals. One email a month, no spam."
+  canonicalUrl="https://dresses-hanfu.com/newsletter"
+  breadcrumbs={[{ name: "Newsletter", url: "/newsletter" }]}
+  noindex={false}
+>
+  <SiteHeader />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; Newsletter</p>
+          <h1>The Hanfu Dress Guide Newsletter</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            One carefully crafted email a month: a deep-dive guide, the week's best Hanfu finds, a travel tip for Hanfu photography, and honest buying opinions. No spam, ever.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-tinted">
+        <div class="container-narrow">
+          <div class="vs-card" style="padding:2rem;">
+            <h2>What You Get</h2>
+            <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+              <li><strong>One featured guide</strong> per issue — history, style, or buying deep-dive.</li>
+              <li><strong>Brand drops &amp; sales</strong> — honest picks, no sponsored noise.</li>
+              <li><strong>Travel tips</strong> for wearing and renting Hanfu in China.</li>
+              <li><strong>Occasional early access</strong> to new pages and our style quiz.</li>
+            </ul>
+            <div style="margin-top:2rem; display:flex; flex-direction:column; gap:0.875rem; align-items:center; text-align:center;">
+              <label for="newsletter-email" style="font-size:0.8125rem;font-weight:600;font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.04em;">Enter your email</label>
+              <form
+                action="https://buttondown.email/api/emails/embed-subscribe/hanfudressguide"
+                method="post"
+                class="newsletter-form"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/hanfudressguide', 'popupwindow'); return true;"
+              >
+                <input type="email" name="email" id="newsletter-email" placeholder="you@example.com" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+              <p style="font-size:0.8125rem;color:var(--color-muted);">Free. Unsubscribe anytime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter newsletter={true} />
+
+  <style>
+    .newsletter-form {
+      display: flex;
+      gap: 0.625rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 26rem;
+    }
+    .newsletter-form input[type="email"] {
+      flex: 1 1 14rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-full);
+      font: inherit;
+      color: var(--color-text);
+      background: var(--color-surface);
+      outline: none;
+      min-width: 0;
+    }
+    .newsletter-form input[type="email"]:focus {
+      border-color: var(--color-accent);
+    }
+  </style>
+</Layout>

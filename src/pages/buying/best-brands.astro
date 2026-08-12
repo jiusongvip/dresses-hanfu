@@ -1,0 +1,92 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Best Hanfu Brands: Editor-Tested Recommendations"
+  description="The best Hanfu brands tested by our editors: Hanfu Story, NewMoonDance, Nuwa Hanfu, plus top Taobao studios like Shisanyu and Huajianji. Honest picks with prices."
+  canonicalUrl="https://dresses-hanfu.com/buying/best-brands"
+  breadcrumbs={[{ name: "Buying", url: "/buying" }, { name: "Best Hanfu Brands", url: "/buying/best-brands" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/buying/where-to-buy" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/buying" style="color:var(--color-accent);">Buying</a> &rsaquo; Best Hanfu Brands</p>
+          <h1>Best Hanfu Brands: What We Actually Recommend</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            There are two tiers of "brands": English-language shops designed for you, and Chinese studios that sell through Taobao. Both can deliver quality. These are the ones we actually recommend after testing.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>International Brands (English Checkout)</h2>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>Hanfu Story (hanfustory.net)</h3>
+            <p><strong>Price:</strong> $60–$300 · <strong>Best for:</strong> first-time buyers.<br>
+            The best-known international seller. Consistent quality, accurate photos, size charts in cm, shipping to US/EU/AU in ~2 weeks. Fabric quality is genuinely good for the price; historical accuracy is "inspired" rather than museum-grade but always tasteful.</p>
+          </div>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>NewMoonDance (Etsy)</h3>
+            <p><strong>Price:</strong> $40–$200 · <strong>Best for:</strong> budget and cosplay.<br>
+              Reliable Etsy Hanfu store. Sets are full, colors are vivid, and their photos match the product. Not historically rigorous, but a popular and fair-value entry.</p>
+          </div>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>Nuwa Hanfu</h3>
+            <p><strong>Price:</strong> $300–$2,000+ · <strong>Best for:</strong> premium custom wedding silk, historical accuracy.<br>
+              High-end studio making genuinely good silk ensembles with traditional cutting, including bridal pieces. Long production (4–8 weeks custom). For the splurge.</p>
+          </div>
+
+          <h2 style="margin-top:3rem;">Top Chinese Studios (via Taobao / agent)</h2>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>Shisanyu (十三閟)</h3>
+            <p><strong>Price:</strong> $80–$400 · <strong>Best for:</strong> bold, stylish Tang and Song designs with huge color options. The Hanfu industry's famous studio with ages of literary collections. Modern silhouettes, excellent colors. Requires a Taobao agent for international delivery.</p>
+          </div>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>Huajianji (花间记)</h3>
+            <p><strong>Price:</strong> $50–$200 · <strong>Best for:</strong> high-quality mid-range Tang ruqun and cotton silk blends. Great fabric for the money, accurate details, comfortable all-day wear. A crowd favorite.</p>
+          </div>
+
+          <div class="vs-card" style="margin-bottom:1rem;">
+            <h3>Chinese Historical Costume Studios (汉赋 / 明制)</h3>
+            <p>China's Ming-style studios have exploded: Search 明制 in Taobao to reach dozens of studios making accurate Ming aoqun and mamianqun skirts. For historical-accuracy fans, this is where to look for $100–$300 research-grade Ming wear.</p>
+          </div>
+
+          <h2 style="margin-top:3rem;">How to Vet Any Hanfu Brand</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Look for the studio name</strong> (店铺) — a real brand shows it; resellers hide it.</li>
+            <li><strong>Ask about fabric composition</strong> — reputable sellers disclose silk %, and describe the weave (sha deart n., ling, jin).</li>
+            <li><strong>Check reviews with photos</strong> — color accuracy differs between screens and fabric.</li>
+            <li><strong>Price sanity:</strong> real silk-Silk set below $60 is almost never real silk.</li>
+          </ul>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Buying and Depths</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/buying/where-to-buy" class="btn btn-outline">Where to Buy</a>
+              <a href="/buying/beginner" class="btn btn-outline">Beginner's Guide</a>
+              <a href="/buying/authentic" class="btn btn-outline">Authentic Hanfu</a>
+              <a href="/buying/budget" class="btn btn-outline">Budget Hanfu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

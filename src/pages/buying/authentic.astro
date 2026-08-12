@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Authentic Hanfu: How to Spot Quality and Real Silk"
+  description="Authentic Hanfu checklist: how to spot real silk, real handicraft, historical accuracy, and avoid scam polyester. Quality signs and tests to use before buying."
+  canonicalUrl="https://dresses-hanfu.com/buying/authentic"
+  breadcrumbs={[{ name: "Buying", url: "/buying" }, { name: "Authentic Hanfu", url: "/buying/authentic" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/buying/where-to-buy" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/buying" style="color:var(--color-accent);">Buying</a> &rsaquo; Authentic Hanfu</p>
+          <h1>Authentic Hanfu: How to Buy Quality, Not Costume</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            "Authentic" is a loaded word in Hanfu. It can mean historically accurate reproduction, or it can mean genuinely well-made with real silk. Both matter — here's how to evaluate a piece like someone who knows their stuff.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>Real Silk: The Actual Test</h2>
+          <p class="text-muted">
+            Silk is the heart of quality Hanfu. Learning to identify it in your hands and listing:
+          </p>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Touch test:</strong> real silk feels cool on contact and warms to body heat; polyester drapes cold and feels plastic. Crumple it: silk crushes and releases with a soft luster, polyester bounces back dull.</li>
+            <li><strong>Burn test:</strong> real silk burns slowly into a small bead with a smell like burning hair; polyester melts into hard dark beads. Do this only on a swatch — never on the garment itself.</li>
+            <li><strong>Price test:</strong> a full silk Hanfu set for under $60 is nearly certain to be a blend or imitation. Real silk where quality matters always costs more.</li>
+            <li><strong>Weave label:</strong> real sellers list si (silk), sha (gauze), ling (twill), or jin (brocade) — vague terms like "silky" are a red flag.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">Craftsmanship Signs to Look For</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li>Seams pressed and finished (not raw edges).</li>
+            <li>Embroidery has a clean back — that means a proper backing, not glue.</li>
+            <li>The collar crosses flat, and the fabric at the neck is firm — not floppy.</li>
+            <li>Real button loops and back stitches on Chinese frog closures are secure, not decorative.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">Historical Accuracy (is the cut "authentic"?)</h2>
+          <p class="text-muted">
+            Some pieces are "historically informed" (using the shapes of silk brocade in tasteful modern redesign), others are "repro" (made to a specific literal pattern). Decide what you want before shopping:
+          </p>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Reproduction:</strong> the fabric, cut, and features follow an actual dynasty (often with a museum or archival reference). Typical of Ming-era reproductions and formal silks.</li>
+            <li><strong>Inspired modern:</strong> takes silhouette cues (cross-collar, layers) with modern colors and cuts. That's not fake — it's an honest modern interpretation, worth less as strict historical accuracy but equally cool if that's what you want.</li>
+          </ul>
+          <p class="text-muted">
+            One more thing honest sellers almost always do: they tell you exactly what you're getting. Real studios (see <a href="/buying/best-brands" style="color:var(--color-accent);">best brands</a>) state the silk type, the lining, and why the piece costs what it costs. Vaguery is a red flag.
+          </p>
+
+          <h2 style="margin-top:3rem;">The $60 Red Line</h2>
+          <p class="text-muted">
+            Not every piece needs to be $300. But a true "authentic silk" claim under $60 is a contradiction. Treat <a href="/buying/budget" style="color:var(--color-accent);">budget Hanfu</a> as what it is: fun entrywear. And treat "authentic" as what it is: either truthful material quality or historically-informed reproduction — decide which one you actually want to buy.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Related Guides</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/buying/best-brands" class="btn btn-outline">Best Brands</a>
+              <a href="/buying/beginner" class="btn btn-outline">Buying for Beginners</a>
+              <a href="/guides/fabrics" class="btn btn-outline">Fabric Guide</a>
+              <a href="/guides/sizing" class="btn btn-outline">Size Guide</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

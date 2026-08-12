@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+
+const cards = [
+  { href: "/comparisons/kimono", title: "Hanfu vs Kimono", desc: "Both descend from ancient Chinese robes, but the wrap direction, sleeve, and obi system split them. Full side-by-side." },
+  { href: "/comparisons/qipao", title: "Hanfu vs Qipao (Cheongsam)", desc: "Loose, layered, ancient Hanfu vs the fitted 20th-century qipao. Completely different garments that are often confused." },
+  { href: "/comparisons/hanbok", title: "Hanfu vs Hanbok", desc: "Korean hanbok shares Tang roots with Hanfu but evolved distinct proportions and a shorter jacket. See the differences." },
+  { href: "/comparisons/cheongsam", title: "Hanfu vs Cheongsam", desc: "Cheongsam is the western name for qipao — why the two names exist, and how both differ from Hanfu." },
+];
+---
+<Layout
+  title="Hanfu Comparisons: Hanfu vs Kimono, Qipao, Hanbok"
+  description="Side-by-side Hanfu comparisons: Hanfu vs kimono, hanfu vs hanbok, hanfu vs qipao cheongsam. The differences explained clearly for international readers."
+  canonicalUrl="https://dresses-hanfu.com/comparisons"
+  breadcrumbs={[{ name: "Comparisons", url: "/comparisons" }]}
+>
+  <SiteHeader active="/comparisons" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; Hanfu Comparisons</p>
+          <h1>Hanfu vs Kimono, Qipao, Hanbok: The Comparisons</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Hanfu is often confused with East Asia's other traditional garments. They share a distant ancestor — but the differences matter. Read the side-by-side comparisons below.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container">
+          <div class="grid-2" style="max-width:52rem;margin-inline:auto;">
+            {cards.map((c) => (
+              <a href={c.href} class="vs-card" style="display:block;">
+                <h3>{c.title}</h3>
+                <p>{c.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import SizeGuide from "../../components/SizeGuide.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Hanfu Size Guide: How to Find Your Size"
+  description="The Hanfu size guide: Chinese vs US/UK sizing, how to measure yourself, where your bust/waist/height matter, and how sash-and-tie construction makes most Hanfu adjustable."
+  canonicalUrl="https://dresses-hanfu.com/guides/sizing"
+  breadcrumbs={[{ name: "Guides", url: "/guides" }, { name: "Hanfu Size Guide", url: "/guides/sizing" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/guides/how-to-wear" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/guides" style="color:var(--color-accent);">Guides</a> &rsaquo; Hanfu Size Guide</p>
+          <h1>Hanfu Size Guide: How to Find Your Right Fit</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            The good news: Hanfu's sash-and-tie construction makes it far more forgiving of size differences than Western tailored clothing. The practical news? You still need accurate measurements — and Chinese sizes are smaller than you're used to.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>The Key Measurements</h2>
+          <p class="text-muted">Measure with a flexible measuring tape, over minimal clothing, and record in actual centimeters (these sellers publish cm-size charts)</p>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Measurement</th><th>Where to Measure</th><th>Why It Matters</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Bust (chest)</strong></td><td>Around the fullest part of the chest, level across the back</td><td>Determines robe/chest fit</td></tr>
+                <tr><td><strong>Waist</strong></td><td>Around your natural waistline (above the belly button)</td><td>May be adjustable with ties</td></tr>
+                <tr><td><strong>Hips</strong></td><td>Around the fullest part of the hips</td><td>Matters for wrap skirts</td></tr>
+                <tr><td><strong>Height</strong></td><td>Stand against the wall, from crown of head to floor</td><td>Determines skirt length choices</td></tr>
+                <tr><td><strong>Shoulders</strong></td><td>Across the back, from one shoulder top to the other</td><td>Fixed for some tops — check</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Chinese vs western Sizing</h2>
+          <p class="text-muted">
+            Chinese size labelling (S/M/L/XL) runs <strong>one to two sizes smaller</strong> than US/UK labels. A US size 8-10 often requires a Chinese XL or 2XL. Do not rely on S/M/L letters — check the numeric centimeters on each seller's size chart and compare against your own measurements.
+          </p>
+
+          <h2 style="margin-top:3rem;">What's Adjustable and What's Not</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Adjustable:</strong> waist (ties/sash), skirt length (can be hemmed by the seller), neckline-cross wrap (forgiving up to certain sizes).</li>
+            <li><strong>Not adjustable:</strong> shoulder width, bust at the fixed point, sleeve length — these must fit you reasonably from the start.</li>
+            <li><strong>Rule of thumb:</strong> buy for your <strong>shoulder + bust</strong> first; if waist/hips differ, the tie system compensates.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">A Note on "Free Size" Pieces</h2>
+          <p class="text-muted">
+            Cheaper Hanfu sometimes lists "one size fits most" — that means up to roughly 96-100 cm bust at best. If you're outside the "most," order from a seller who provides chest/height options. Good Taobao and international sellers ship premade in multiple sizes.
+          </p>
+
+          <h2 style="margin-top:3rem;">Custom Fit</h2>
+          <p class="text-muted">
+            Premium and custom-made Hanfu (see <a href="/buying/authentic" style="color:var(--color-accent);">Authentic Hanfu</a>) is made to your specific measurements. Expect production to take 2-6 weeks for domestic orders, 2-6 months for premium custom silk pieces — plan ahead for weddings and shoots.
+          </p>
+
+          <SizeGuide />
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

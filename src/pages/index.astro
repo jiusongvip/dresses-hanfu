@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import StyleRecommender from "../components/StyleRecommender.astro";
 import SizeGuide from "../components/SizeGuide.astro";
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 ---
 <Layout
   title="Traditional Chinese Hanfu: Complete 2026 Guide"
@@ -21,7 +23,7 @@ import SizeGuide from "../components/SizeGuide.astro";
         <a href="#travel">Travel</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a href="#buy" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">Shop Guide</a>
+      <a href="/travel/xian" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">Wear It in China</a>
     </div>
   </nav>
 
@@ -32,58 +34,71 @@ import SizeGuide from "../components/SizeGuide.astro";
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-        <h1 id="hero-heading">Hanfu Dresses: The Complete Guide to Traditional Chinese Hanfu</h1>
-        <p class="lead">Everything you need to know about traditional Chinese Hanfu: explore styles by dynasty, learn how to wear it, find the perfect outfit for any occasion, and discover where to buy authentic pieces or rent them when traveling in China.</p>
+        <h1 id="hero-heading">Hanfu Dresses — The Complete Guide</h1>
+            <p class="lead">Flowing robes, 3,000 years, &amp; one unforgettable look. Everything about traditional Chinese Hanfu — the visual way.</p>
             <div class="hero-cta-group">
-              <a href="#styles" class="btn btn-primary">Explore Hanfu Styles</a>
-              <a href="#buy" class="btn btn-outline">Hanfu Buying Guide</a>
+              <a href="#styles" class="btn btn-primary">Explore Styles</a>
+              <a href="#buy" class="btn btn-outline">Buying Guide</a>
             </div>
           </div>
           <div class="hero-image">
-            <img src="/images/hero-hanfu-dress.webp" alt="Woman wearing elegant Tang Dynasty red Hanfu dress with flowing wide sleeves in ancient Chinese palace courtyard" width="600" height="800" fetchpriority="high" loading="eager" decoding="sync">
+            <img src="/images/hero-hanfu-dress.webp" srcset="/images/opt/hero-hanfu-dress-400w.webp 400w, /images/opt/hero-hanfu-dress-600w.webp 600w" sizes="(max-width: 768px) 100vw, 480px" alt="Woman wearing elegant Tang Dynasty red Hanfu dress with flowing wide sleeves in ancient Chinese palace courtyard" width="600" height="800" fetchpriority="high" loading="eager" decoding="sync">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What Is Hanfu -->
-    <section class="section" aria-labelledby="what-is-heading">
-      <div class="container-narrow">
-        <h2 id="what-is-heading">What Is a Hanfu Dress?</h2>
-        <div class="text-muted" style="font-size: 1.125rem; margin-top: 2rem;">
-          <p>Hanfu (hanfu, han fu) is the traditional clothing of the Han Chinese people, with a history spanning over three thousand years tracing back to the Yellow Emperor. The term literally means "Han clothing," referring to the attire worn by the Han ethnic majority throughout China's dynastic eras -- from the Han Dynasty to the end of the Ming Dynasty.</p>
-          <p>Unlike the figure-hugging qipao (cheongsam) that most Westerners associate with Chinese dress, Hanfu is characterized by flowing silhouettes, cross-collars tied to the right side, wide sleeves, and layered robes secured with sashes rather than buttons. Each dynasty contributed distinct styles: the elegant draping of the Han, the opulent boldness of the Tang, the restrained grace of the Song, and the dignified structure of the Ming.</p>
-          <p>After centuries of suppression during the Qing Dynasty (1644-1912), Hanfu experienced a remarkable revival in the early 21st century. Driven by a younger generation eager to reconnect with cultural roots and amplified by social media platforms like TikTok and Instagram, what began as a niche movement in China has become a global phenomenon. Today, Hanfu communities thrive worldwide, and international fashion designers increasingly draw inspiration from its timeless aesthetic. <a href="https://en.wikipedia.org/wiki/Hanfu" target="_blank" rel="noopener" style="color:var(--color-accent);">Read more on Wikipedia</a> and explore collections at the <a href="https://www.metmuseum.org/toah/hd/chin/hd_chin.htm" target="_blank" rel="noopener" style="color:var(--color-accent);">Metropolitan Museum of Art</a>.</p>
+    <!-- What is Hanfu + Can I wear — full-bleed image band -->
+    <section class="section" style="padding-top: 4rem;" aria-label="What is Hanfu">
+      <div class="image-band image-band-full">
+        <img src="/images/hanfu-og.webp" srcset="/images/opt/hanfu-og-400w.webp 400w, /images/opt/hanfu-og-600w.webp 600w" sizes="100vw" alt="Graceful Hanfu robe with flowing sleeves and traditional crossed collar" width="1200" height="630" loading="lazy">
+        <div class="image-band-caption">
+          <span class="band-kicker">Hanfu 101</span>
+          <span class="band-title">Cross-collar robes. Sash-tied. Right over left.</span>
+          <span class="band-sub">That's the whole shape of Hanfu. Every body can wear it — anyone, any size.</span>
+          <div class="band-cta">
+            <a href="/guides/history" class="btn btn-outline">3,000 Year History</a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Can I Wear Hanfu? -->
-    <section class="section" aria-labelledby="can-i-wear-heading" style="padding-top: 0;">
-      <div class="container-narrow">
-        <h2 id="can-i-wear-heading">Can I Wear Hanfu? Yes — Here's How to Get Started</h2>
-        <div class="text-muted" style="font-size: 1.125rem; margin-top: 2rem;">
-          <p>Short answer: absolutely. Hanfu is meant to be shared, and the global Hanfu community welcomes enthusiasts of every background. Cultural appreciation is encouraged when done with respect for the garment's history and traditions.</p>
-          <p>Hanfu is one of the most forgiving and inclusive traditional garments you can wear. Its loose, flowing cuts, sash-and-tie closures, and layered construction mean there is no single "right" body type. Whether you're tall or petite, curvy or slim, there's a dynasty style and a fit that will look and feel wonderful on you.</p>
-          <p>If you are just getting started, here is the simplest path: pick a modern Hanfu (xin hanfu) in cotton or linen, choose a versatile color like navy or dusty pink, and try a Ming dynasty-inspired cut — it's the most beginner-friendly thanks to its structured silhouette and adjustable waist ties. Then explore further: Tang for drama, Song for quiet elegance, or a full traditional set when you feel ready.</p>
-        </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:1.5rem;">
+        <span class="chip"><i class="fa-solid fa-rotate-left"></i> right-over-left collar</span>
+        <span class="chip"><i class="fa-solid fa-shirt"></i> wide sleeves</span>
+        <span class="chip"><i class="fa-solid fa-link"></i> sash, not buttons</span>
+        <span class="chip"><i class="fa-solid fa-hands"></i> for every body type</span>
       </div>
     </section>
 
     <!-- Explore Styles -->
     <section id="styles" class="section" aria-labelledby="styles-heading">
       <div class="container">
-        <h2 id="styles-heading" class="section-title">Explore Hanfu Styles</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">From authentic dynasty-period pieces to modern interpretations: every major Hanfu style, explained in detail.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-landmark"></i></span>
+          <h2 id="styles-heading" class="section-title" style="margin-bottom:0;">Explore Hanfu Styles</h2>
+        </div>
+        <div class="media-card" style="margin-bottom: 2rem; grid-template-columns: 38% 62%;">
+          <div class="media-card-img">
+            <img src="/images/pexels-ginkgo.jpg" srcset="/images/opt/pexels-ginkgo-400w.webp 400w, /images/opt/pexels-ginkgo-600w.webp 600w" sizes="(max-width: 768px) 100vw, 420px" alt="Woman wearing traditional Chinese Hanfu amidst fallen ginkgo leaves" width="1600" height="2400" loading="lazy">
+          </div>
+          <div class="media-card-body" style="display:flex;flex-direction:column;justify-content:center;">
+            <h3>8 styles. One fabric world.</h3>
+            <p>Dynasty classics, modern everyday wear, and wedding robes. Tap a style to see it up close.</p>
+            <div class="chip-row" style="margin-top:1rem;">
+              <span class="chip"><i class="fa-solid fa-fire"></i> Tang drama</span>
+              <span class="chip"><i class="fa-solid fa-leaf"></i> Song calm</span>
+              <span class="chip"><i class="fa-solid fa-tshirt"></i> Modern easy</span>
+            </div>
+          </div>
+        </div>
         <div class="grid-3">
-<a href="/styles/tang" class="style-link"><span class="style-link-indicator"></span><div><strong>Tang Dynasty Hanfu</strong><span class="card-desc">Bold colors, dramatic wide sleeves, high-waisted skirts. <em style="font-style:normal;color:var(--color-accent)">Dramatic, bold, and opulent — the ultimate statement style.</em></span></div></a>
-          <a href="/styles/song" class="style-link"><span class="style-link-indicator"></span><div><strong>Song Dynasty Hanfu</strong><span class="card-desc">Slim silhouettes, muted tones, layered beizi jackets. <em style="font-style:normal;color:var(--color-accent)">Elegant and understated — ideal for quiet refinement.</em></span></div></a>
-          <a href="/styles/ming" class="style-link"><span class="style-link-indicator"></span><div><strong>Ming Dynasty Hanfu</strong><span class="card-desc">Standing collars, horse-face skirts, ornate embroidery. <em style="font-style:normal;color:var(--color-accent)">Structured and dignified — great for formal occasions.</em></span></div></a>
-          <a href="/styles/modern" class="style-link"><span class="style-link-indicator"></span><div><strong>Modern Hanfu (Xin Hanfu)</strong><span class="card-desc">Simplified cuts, breathable fabrics for daily wear. <em style="font-style:normal;color:var(--color-accent)">The most beginner-friendly option — easy to wear anywhere.</em></span></div></a>
-          <a href="/styles/wedding" class="style-link"><span class="style-link-indicator"></span><div><strong>Wedding Hanfu</strong><span class="card-desc">Red bridal robes with gold embroidery and phoenix motifs. <em style="font-style:normal;color:var(--color-accent)">Traditional and stunning for your special day.</em></span></div></a>
-          <a href="/styles/women" class="style-link"><span class="style-link-indicator"></span><div><strong>Women's Hanfu</strong><span class="card-desc">Flowing ruqun and aoqun in bright silks. <em style="font-style:normal;color:var(--color-accent)">The most popular and versatile style — great for any occasion.</em></span></div></a>
-          <a href="/styles/men" class="style-link"><span class="style-link-indicator"></span><div><strong>Men's Hanfu</strong><span class="card-desc">Straight cuts, darker colors, dignified presence. <em style="font-style:normal;color:var(--color-accent)">Classic and understated — perfect for couples matching sets.</em></span></div></a>
-          <a href="/styles/kids" class="style-link"><span class="style-link-indicator"></span><div><strong>Kids Hanfu</strong><span class="card-desc">Soft fabrics, elastic waists, simplified construction. <em style="font-style:normal;color:var(--color-accent)">Adorable and comfortable — great for festivals and family outings.</em></span></div></a>
+<a href="/styles/tang" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-fire"></i></span><div><strong>Tang Dynasty</strong><span class="card-desc">Bold. Big sleeves.</span></div></a>
+          <a href="/styles/song" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-leaf"></i></span><div><strong>Song Dynasty</strong><span class="card-desc">Quiet. Soft tones.</span></div></a>
+          <a href="/styles/ming" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-landmark"></i></span><div><strong>Ming Dynasty</strong><span class="card-desc">Structured. Embroidery.</span></div></a>
+          <a href="/styles/modern" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-tshirt"></i></span><div><strong>Modern Xin Hanfu</strong><span class="card-desc">Everyday easy wear.</span></div></a>
+          <a href="/styles/wedding" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-ring"></i></span><div><strong>Wedding Hanfu</strong><span class="card-desc">Red + gold robes.</span></div></a>
+          <a href="/styles/women" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-user-large"></i></span><div><strong>Women's Hanfu</strong><span class="card-desc">Flowing ruqun.</span></div></a>
+          <a href="/styles/men" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-user-tie"></i></span><div><strong>Men's Hanfu</strong><span class="card-desc">Straight, darker cuts.</span></div></a>
+          <a href="/styles/kids" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-baby"></i></span><div><strong>Kids Hanfu</strong><span class="card-desc">Soft. Festive-ready.</span></div></a>
         </div>
       </div>
     </section>
@@ -94,51 +109,50 @@ import SizeGuide from "../components/SizeGuide.astro";
 
         <section id="dynasties" class="section" aria-labelledby="dynasties-heading">
       <div class="container">
-        <h2 id="dynasties-heading" class="section-title">Hanfu by Dynasty</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">Each Chinese dynasty left its mark on Hanfu design. Explore the distinctive styles across four defining periods.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-compass"></i></span>
+          <h2 id="dynasties-heading" class="section-title" style="margin-bottom:0;">Hanfu by Dynasty</h2>
+        </div>
+        <p class="section-subtitle-lean">Four eras. Four looks. Tap a dynasty.</p>
         <div class="grid-4">
           <a href="/dynasty/han" class="dynasty-card" style="display:block;color:inherit;">
             <div class="dynasty-card-img">
-              <img src="/images/dynasty-han.webp" alt="Traditional Han Dynasty shenyi robe with wide sleeves and crossed collar in earthen tones" width="600" height="800" loading="lazy">
+              <img src="/images/dynasty-han.webp" srcset="/images/opt/dynasty-han-400w.webp 400w, /images/opt/dynasty-han-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Traditional Han Dynasty shenyi robe with wide sleeves and crossed collar in earthen tones" width="600" height="800" loading="lazy">
             </div>
             <div class="dynasty-card-body">
               <h3>Han Dynasty</h3>
-              <p class="era">206 BCE -- 220 CE</p>
-              <p>The origin of Hanfu. Simple, elegant shenyi robes with wide sleeves and crossed collars that defined Chinese attire for millennia.</p>
-              <span style="display:inline-block;margin-top:0.75rem;font-size:0.8125rem;font-weight:500;font-family:var(--font-display);color:var(--color-accent);">Read full guide →</span>
+              <p class="era">206 BCE — 220 CE</p>
+              <p>Where it all began.</p>
             </div>
           </a>
           <a href="/dynasty/tang" class="dynasty-card" style="display:block;color:inherit;">
             <div class="dynasty-card-img">
-              <img src="/images/dynasty-tang.webp" alt="Tang Dynasty Hanfu dress with bold red and gold colors and dramatic flowing silhouette" width="600" height="800" loading="lazy">
+              <img src="/images/dynasty-tang.webp" srcset="/images/opt/dynasty-tang-400w.webp 400w, /images/opt/dynasty-tang-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Tang Dynasty Hanfu dress with bold red and gold colors and dramatic flowing silhouette" width="600" height="800" loading="lazy">
             </div>
             <div class="dynasty-card-body">
               <h3>Tang Dynasty</h3>
-              <p class="era">618 -- 907 CE</p>
-              <p>The golden age. Bold colors, luxurious silks, high-waisted skirts, and dramatic wide sleeves reflecting cosmopolitan confidence.</p>
-              <span style="display:inline-block;margin-top:0.75rem;font-size:0.8125rem;font-weight:500;font-family:var(--font-display);color:var(--color-accent);">Read full guide →</span>
+              <p class="era">618 — 907 CE</p>
+              <p>Big colors. Big sleeves.</p>
             </div>
           </a>
           <a href="/dynasty/song" class="dynasty-card" style="display:block;color:inherit;">
             <div class="dynasty-card-img">
-              <img src="/images/dynasty-song.webp" alt="Song Dynasty Hanfu with slim silhouette and layered beizi jacket in muted pastel tones" width="600" height="800" loading="lazy">
+              <img src="/images/dynasty-song.webp" srcset="/images/opt/dynasty-song-400w.webp 400w, /images/opt/dynasty-song-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Song Dynasty Hanfu with slim silhouette and layered beizi jacket in muted pastel tones" width="600" height="800" loading="lazy">
             </div>
             <div class="dynasty-card-body">
               <h3>Song Dynasty</h3>
-              <p class="era">960 -- 1279 CE</p>
-              <p>Scholar refinement. Slim silhouettes, muted tones, narrow sleeves, and layered beizi jackets favored by the literati class.</p>
-              <span style="display:inline-block;margin-top:0.75rem;font-size:0.8125rem;font-weight:500;font-family:var(--font-display);color:var(--color-accent);">Read full guide →</span>
+              <p class="era">960 — 1279 CE</p>
+              <p>Quiet. Refined. Soft.</p>
             </div>
           </a>
           <a href="/dynasty/ming" class="dynasty-card" style="display:block;color:inherit;">
             <div class="dynasty-card-img">
-              <img src="/images/dynasty-ming.webp" alt="Ming Dynasty Hanfu with standing collar and ornate gold embroidery on rich blue brocade" width="600" height="800" loading="lazy">
+              <img src="/images/dynasty-ming.webp" srcset="/images/opt/dynasty-ming-400w.webp 400w, /images/opt/dynasty-ming-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Ming Dynasty Hanfu with standing collar and ornate gold embroidery on rich blue brocade" width="600" height="800" loading="lazy">
             </div>
             <div class="dynasty-card-body">
               <h3>Ming Dynasty</h3>
-              <p class="era">1368 -- 1644 CE</p>
-              <p>The final form. Structured dignity with standing collars, horse-face skirts (mamianqun), and ornate embroidery in rich patterns.</p>
-              <span style="display:inline-block;margin-top:0.75rem;font-size:0.8125rem;font-weight:500;font-family:var(--font-display);color:var(--color-accent);">Read full guide →</span>
+              <p class="era">1368 — 1644 CE</p>
+              <p>Structured. Dignified. Rich.</p>
             </div>
           </a>
         </div>
@@ -148,31 +162,34 @@ import SizeGuide from "../components/SizeGuide.astro";
 <!-- Outfit Inspiration -->
     <section id="outfits" class="section" aria-labelledby="outfits-heading">
       <div class="container">
-        <h2 id="outfits-heading" class="section-title">Hanfu Outfit Inspiration</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">How to style Hanfu for every occasion, from casual daily wear to formal ceremonies and photography.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-images"></i></span>
+          <h2 id="outfits-heading" class="section-title" style="margin-bottom:0;">Hanfu Outfit Inspiration</h2>
+        </div>
+        <p class="section-subtitle-lean">From casual daily wear to formal ceremonies and editorial photography.</p>
         <div class="grid-3">
           <div class="gallery-item">
-            <img src="/images/outfit-daily.webp" alt="Modern xin hanfu casual daily wear in cotton linen with cross-collar design" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-daily.webp" srcset="/images/opt/outfit-daily-400w.webp 400w, /images/opt/outfit-daily-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Modern xin hanfu casual daily wear in cotton linen with cross-collar design" width="600" height="800" loading="lazy">
             <span class="gallery-label">Daily Hanfu</span>
           </div>
           <div class="gallery-item">
-            <img src="/images/outfit-festival.webp" alt="Woman wearing festive Hanfu with elaborate gold embroidery at traditional Chinese lantern festival" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-festival.webp" srcset="/images/opt/outfit-festival-400w.webp 400w, /images/opt/outfit-festival-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Woman wearing festive Hanfu with elaborate gold embroidery at traditional Chinese lantern festival" width="600" height="800" loading="lazy">
             <span class="gallery-label">Festival</span>
           </div>
           <div class="gallery-item">
-            <img src="/images/outfit-wedding.webp" alt="Bridal wedding Hanfu in luxurious red silk with gold phoenix embroidery" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-wedding.webp" srcset="/images/opt/outfit-wedding-400w.webp 400w, /images/opt/outfit-wedding-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Bridal wedding Hanfu in luxurious red silk with gold phoenix embroidery" width="600" height="800" loading="lazy">
             <span class="gallery-label">Wedding</span>
           </div>
           <div class="gallery-item">
-            <img src="/images/outfit-tea-ceremony.webp" alt="Woman in Song Dynasty Hanfu performing traditional Chinese tea ceremony in bamboo room" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-tea-ceremony.webp" srcset="/images/opt/outfit-tea-ceremony-400w.webp 400w, /images/opt/outfit-tea-ceremony-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Woman in Song Dynasty Hanfu performing traditional Chinese tea ceremony in bamboo room" width="600" height="800" loading="lazy">
             <span class="gallery-label">Tea Ceremony</span>
           </div>
           <div class="gallery-item">
-            <img src="/images/outfit-photography.webp" alt="Professional editorial photography of Tang Dynasty Hanfu at ancient temple with misty mountains" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-photography.webp" srcset="/images/opt/outfit-photography-400w.webp 400w, /images/opt/outfit-photography-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Professional editorial photography of Tang Dynasty Hanfu at ancient temple with misty mountains" width="600" height="800" loading="lazy">
             <span class="gallery-label">Photography</span>
           </div>
           <div class="gallery-item">
-            <img src="/images/outfit-cosplay.webp" alt="Fantasy-inspired Hanfu cosplay costume with intricate embroidery in mystical forest" width="600" height="800" loading="lazy">
+            <img src="/images/outfit-cosplay.webp" srcset="/images/opt/outfit-cosplay-400w.webp 400w, /images/opt/outfit-cosplay-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Fantasy-inspired Hanfu cosplay costume with intricate embroidery in mystical forest" width="600" height="800" loading="lazy">
             <span class="gallery-label">Cosplay</span>
           </div>
         </div>
@@ -182,21 +199,31 @@ import SizeGuide from "../components/SizeGuide.astro";
     <!-- VS Comparisons -->
     <section id="vs" class="section" aria-labelledby="vs-heading">
       <div class="container">
-        <h2 id="vs-heading" class="section-title">Hanfu vs Other Traditional Clothing</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">How does Hanfu compare to other East Asian traditional dress? Clear comparisons to help you tell them apart.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+          <h2 id="vs-heading" class="section-title" style="margin-bottom:0;">Hanfu vs Kimono, Qipao, Hanbok</h2>
+        </div>
+        <div class="image-band image-band-full" style="margin-bottom: 2.5rem;">
+        <img src="/images/pexels-hanfu-bridge.jpg" srcset="/images/opt/pexels-hanfu-bridge-400w.webp 400w, /images/opt/pexels-hanfu-bridge-600w.webp 600w" sizes="100vw" alt="Woman in flowing red Hanfu posing on a bridge against a city skyline" width="1600" height="1065" loading="lazy">
+        <div class="image-band-caption">
+          <span class="band-kicker">Quick ID</span>
+          <span class="band-title">Kimono? Qipao? Hanbok? Here's the difference.</span>
+          <span class="band-sub">Three fast comparisons — one glance each.</span>
+        </div>
+      </div>
         <div class="grid-2" style="max-width: 64rem; margin-inline: auto;">
-          <div class="vs-card">
-            <h3>Hanfu vs Kimono</h3>
-            <p>Hanfu predates the kimono by over a millennium. Hanfu wraps with a cross-collar secured by a sash; kimonos use a wide obi belt and a rectangular T-shape construction with a distinct, more rigid silhouette.</p>
-          </div>
-          <div class="vs-card">
-            <h3>Hanfu vs Qipao (Cheongsam)</h3>
-            <p>Hanfu is loose-fitting, layered, and anchored in pre-Qing history. Qipao is a form-fitting, 20th-century dress influenced by Manchu clothing and Western tailoring, popularized in 1920s Shanghai.</p>
-          </div>
-          <div class="vs-card">
-            <h3>Hanfu vs Hanbok</h3>
-            <p>Korean hanbok shares origins with Hanfu from the Tang dynasty. Both feature the jeogori-like upper garment, but hanbok evolved distinct proportions: fuller, higher-waisted skirts and shorter jackets.</p>
-          </div>
+          <a href="/comparisons/kimono" class="vs-card" style="display:block;color:inherit;">
+            <h3>Hanfu <span style="color:var(--color-muted);">vs</span> Kimono</h3>
+            <p>Older by 1,000+ years. Hanfu: sash-tied + cross-collar. Kimono: obi belt + rigid T-shape.</p>
+          </a>
+          <a href="/comparisons/qipao" class="vs-card" style="display:block;color:inherit;">
+            <h3>Hanfu <span style="color:var(--color-muted);">vs</span> Qipao</h3>
+            <p>Loose, layered, pre-Qing. Qipao: fitted 1920s dress, Manchu + Western tailoring.</p>
+          </a>
+          <a href="/comparisons/hanbok" class="vs-card" style="display:block;color:inherit;">
+            <h3>Hanfu <span style="color:var(--color-muted);">vs</span> Hanbok</h3>
+            <p>Same Tang roots. Hanbok: fuller skirts + shorter jackets. That's how you tell them apart.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -205,67 +232,82 @@ import SizeGuide from "../components/SizeGuide.astro";
     <section id="how-to-wear" class="section-tinted" aria-labelledby="howto-heading">
       <div class="container">
         <h2 id="howto-heading" style="margin-bottom: 1rem;">How to Wear Hanfu</h2>
-        <p class="section-subtitle" style="margin-bottom: 3rem;">A step-by-step guide to dressing in traditional Hanfu, from inner layers to final accessories.</p>
+        <div class="image-band image-band-full" style="margin-bottom: 3rem;">
+        <img src="/images/pexels-hanfu-portrait.jpg" srcset="/images/opt/pexels-hanfu-portrait-400w.webp 400w, /images/opt/pexels-hanfu-portrait-600w.webp 600w" sizes="100vw" alt="Woman wearing Hanfu with traditional crossed collar, portrait against yellow background" width="1600" height="1067" loading="lazy">
+        <div class="image-band-caption">
+          <span class="band-kicker">Dressing 101</span>
+          <span class="band-title">Right over left. Every time.</span>
+          <span class="band-sub">Five layers, one rule. Here's the whole sequence.</span>
+          <div class="band-cta">
+            <a href="/guides/how-to-wear" class="btn btn-outline">Full Wear Guide</a>
+          </div>
+        </div>
+      </div>
+        <p class="section-subtitle" style="margin-bottom: 2.5rem;">Five layers. Right over left. Sash it. Done.</p>
         <div class="step-list">
           <div class="step-row">
             <span class="step-number-tinted">1</span>
             <div class="step-content-tinted">
               <h4>Inner Layer (Zhongyi)</h4>
-              <p>Start with a white cotton or silk inner garment worn against the skin. The zhongyi provides comfort and creates the base for layering. Cross the collar right over left, securing it with an inner tie.</p>
+              <p>White cotton or silk base. Right over left.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">2</span>
             <div class="step-content-tinted">
               <h4>Main Robe (Aoqun or Ruqun)</h4>
-              <p>Layer the main outer garment. For women, this is typically an aoqun (jacket and skirt) or ruqun (top and wrap skirt). Always cross the collar right over left -- left over right is reserved for funerals in Chinese tradition.</p>
+              <p>Aoqun or ruqun. Right over left, always.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">3</span>
             <div class="step-content-tinted">
               <h4>Belt and Sash</h4>
-              <p>Secure the waist with a fabric sash or decorative belt. This creates the characteristic flowing silhouette and keeps all layers in place. Silk ribbons or leather belts both work, depending on the dynasty style.</p>
+              <p>Tie it at the waist. That's the silhouette.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">4</span>
             <div class="step-content-tinted">
               <h4>Accessories</h4>
-              <p>Add hairpins (zan), jade pendants, decorative fans, tassels, and other ornaments. Accessories signal social status, season, and occasion. Choose pieces that complement your chosen dynasty style.</p>
+              <p>Hairpins, fans, jewelry. Match the dynasty.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">5</span>
             <div class="step-content-tinted">
               <h4>Hair and Footwear</h4>
-              <p>Style hair in a traditional updo, braid, or half-up style appropriate to the dynasty. Finish with embroidered cloth shoes or boots. For formal occasions, add a hair crown or elaborate headdress.</p>
+              <p>Updo + embroidered shoes. Crown for formal.</p>
             </div>
           </div>
         </div>
+        <p style="margin-top: 2rem;"><a class="btn btn-outline" href="/guides/how-to-wear">Full Step-by-Step Guide</a></p>
       </div>
     </section>
 
     <!-- Accessories -->
     <section id="accessories" class="section" aria-labelledby="accessories-heading">
       <div class="container">
-        <h2 id="accessories-heading" class="section-title">Hanfu Accessories</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">The right accessories complete the look. Explore traditional Hanfu adornments that elevate every outfit.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-gem"></i></span>
+          <h2 id="accessories-heading" class="section-title" style="margin-bottom:0;">Hanfu Accessories</h2>
+        </div>
+        <p class="section-subtitle-lean">Hairpins, fans, shoes, and sashes — the finishing touches that complete the look.</p>
         <div class="grid-4">
           <a href="/accessories/hairpins" class="gallery-item" style="display:block;">
-            <img src="/images/accessory-hairpins.webp" alt="Traditional Chinese hairpins in gold and jade with intricate filigree design" width="600" height="800" loading="lazy">
+            <img src="/images/accessory-hairpins.webp" srcset="/images/opt/accessory-hairpins-400w.webp 400w, /images/opt/accessory-hairpins-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Traditional Chinese hairpins in gold and jade with intricate filigree design" width="600" height="800" loading="lazy">
             <span class="gallery-label">Hairpins (Zan)</span>
           </a>
           <a href="/accessories/fans" class="gallery-item" style="display:block;">
-            <img src="/images/accessory-fans.webp" alt="Elegant Chinese folding fans with hand-painted landscape and calligraphy" width="600" height="800" loading="lazy">
+            <img src="/images/accessory-fans.webp" srcset="/images/opt/accessory-fans-400w.webp 400w, /images/opt/accessory-fans-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Elegant Chinese folding fans with hand-painted landscape and calligraphy" width="600" height="800" loading="lazy">
             <span class="gallery-label">Fans</span>
           </a>
           <a href="/accessories/shoes" class="gallery-item" style="display:block;">
-            <img src="/images/accessory-shoes.webp" alt="Traditional embroidered Chinese cloth shoes with delicate floral patterns" width="600" height="800" loading="lazy">
+            <img src="/images/accessory-shoes.webp" srcset="/images/opt/accessory-shoes-400w.webp 400w, /images/opt/accessory-shoes-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Traditional embroidered Chinese cloth shoes with delicate floral patterns" width="600" height="800" loading="lazy">
             <span class="gallery-label">Shoes</span>
           </a>
           <a href="/accessories/belts" class="gallery-item" style="display:block;">
-            <img src="/images/accessory-belts.webp" alt="Decorative Hanfu waist sashes and belts in silk brocade with jade ornaments" width="600" height="800" loading="lazy">
+            <img src="/images/accessory-belts.webp" srcset="/images/opt/accessory-belts-400w.webp 400w, /images/opt/accessory-belts-600w.webp 600w" sizes="(max-width: 900px) 50vw, 300px" alt="Decorative Hanfu waist sashes and belts in silk brocade with jade ornaments" width="600" height="800" loading="lazy">
             <span class="gallery-label">Belts and Sashes</span>
           </a>
         </div>
@@ -277,58 +319,51 @@ import SizeGuide from "../components/SizeGuide.astro";
     <!-- Hanfu City Guide & Travel Planning -->
     <section id="travel" class="section-tinted" aria-labelledby="travel-heading">
       <div class="container">
-        <h2 id="travel-heading" style="margin-bottom: 1rem;">Hanfu City Guide: Where to Go for the Best Experience</h2>
-        <p class="section-subtitle" style="margin-bottom: 3rem;">Every major tourist city in China has its own Hanfu scene. Here is what makes each destination unique, plus a sample itinerary to plan your trip.</p>
-        <div class="grid-2" style="margin-bottom: 4rem;">
-          <div class="buy-card-tinted">
-            <h3>Xi'an -- The Ultimate Hanfu City</h3>
-            <p>The ancient capital with the most complete Hanfu ecosystem. The City Wall, Giant Wild Goose Pagoda, and Tang Paradise offer epic backdrops. Hundreds of rental shops near the South Gate (Yongningmen) and around the Big Wild Goose Pagoda square. Rentals from 100-200 RMB. Best at sunset on the City Wall.</p>
-          </div>
-          <div class="buy-card-tinted">
-            <h3>Hangzhou -- Hanfu by the Water</h3>
-            <p>West Lake is arguably the most photogenic Hanfu location in China. Rent a Hanfu near Hubin or along Nanshan Road. The classic shot: standing on a bridge at dawn with mist over the lake. Spring (March-April) for cherry blossoms; autumn for golden ginkgo trees. Rentals 150-300 RMB.</p>
-          </div>
-          <div class="buy-card-tinted">
-            <h3>Beijing -- Imperial Grandeur</h3>
-            <p>The Forbidden City, Summer Palace, and Temple of Heaven provide the most majestic Hanfu backdrops. Rental shops cluster near Gulou (Drum Tower) and around Nanluoguxiang. Winter Hanfu photography with snow at the Forbidden City is iconic but requires thermal underlayers. Rentals 150-350 RMB.</p>
-          </div>
-          <div class="buy-card-tinted">
-            <h3>Suzhou -- Classical Garden Elegance</h3>
-            <p>The Humble Administrator's Garden, Lingering Garden, and Pingjiang Road offer intimate, refined settings perfect for Song and Ming dynasty Hanfu. Suzhou is also a silk production center: buy quality silk Hanfu accessories here. Fewer crowds than Beijing or Xi'an. Rentals 120-250 RMB.</p>
-          </div>
-          <div class="buy-card-tinted">
-            <h3>Chengdu -- Laid-Back Hanfu Culture</h3>
-            <p>Jinli Ancient Street and Kuanzhai Alley are popular Hanfu spots. Chengdu has a young, vibrant Hanfu community. The giant panda backdrop at the Panda Base makes for a unique Hanfu photo. Combine Hanfu with Sichuan opera and hotpot for the full Chengdu experience. Rentals 80-200 RMB.</p>
-          </div>
-          <div class="buy-card-tinted">
-            <h3>Luoyang & Dali -- Hidden Gems</h3>
-            <p>Luoyang's Longmen Grottoes and White Horse Temple offer dramatic Buddhist-backdrop Hanfu shots. Dali's Ancient Town against the Cangshan Mountains creates a dreamy, ethereal Hanfu setting. Both cities have lower prices (60-150 RMB rentals) and fewer tourists in frame.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+          <h2 id="travel-heading" style="margin-bottom: 0;">Hanfu City Guide: Where to Go</h2>
+        </div>
+        <div class="image-band image-band-full" style="margin-bottom: 2.5rem;">
+        <img src="/images/pexels-nanjing.jpg" srcset="/images/opt/pexels-nanjing-400w.webp 400w, /images/opt/pexels-nanjing-600w.webp 600w" sizes="100vw" alt="People in traditional attire strolling through a vibrant Nanjing street in autumn" width="1600" height="1067" loading="lazy">
+        <div class="image-band-caption">
+          <span class="band-kicker">Travel</span>
+          <span class="band-title">Where to wear Hanfu in China.</span>
+          <span class="band-sub">Six cities. Six moods. Rentals ~60–350 RMB/day.</span>
+          <div class="band-cta">
+            <a href="/travel" class="btn btn-outline">City Guides</a>
           </div>
         </div>
+      </div>
+        <p class="section-subtitle-lean">Six cities. Six moods. Rentals ~60–350 RMB/day.</p>
+        <div class="grid-3" style="margin-bottom: 4rem;">
+          <a href="/travel/xian" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Xi'an <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 100–200</span></h3>
+            <p>City Wall + Tang Paradise. Shop near the South Gate. Sunset = magic.</p>
+          </a>
+          <a href="/travel/hangzhou" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Hangzhou <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 150–300</span></h3>
+            <p>West Lake. Mist, bridges, cherry blossoms. The most-photographed spot.</p>
+          </a>
+          <a href="/travel/beijing" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Beijing <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 150–350</span></h3>
+            <p>Forbidden City + Summer Palace. Snowy Hanfu shots need thermals.</p>
+          </a>
+          <a href="/travel/suzhou" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Suzhou <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 120–250</span></h3>
+            <p>Classical gardens. Fewer crowds. Silk capital — buy accessories here.</p>
+          </a>
+          <a href="/travel/chengdu" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Chengdu <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 80–200</span></h3>
+            <p>Jinli + Kuanzhai lanes. Young scene, pandas nearby. Add hotpot.</p>
+          </a>
+          <a href="/travel/luoyang" class="buy-card-tinted" style="display:block;color:inherit;text-decoration:none;">
+            <h3>Luoyang <span class="chip chip-chip"><i class="fa-solid fa-coins"></i> 60–150</span></h3>
+            <p>Buddhist grottoes. Cheapest. Least crowded.</p>
+          </a>
+        </div>
 
-        <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; margin-bottom: 1.5rem; color: var(--color-text);">Sample 3-Day Hanfu Itinerary: Xi'an</h3>
-        <div class="step-list">
-          <div class="step-row">
-            <span class="step-number-tinted">D1</span>
-            <div class="step-content-tinted">
-              <h4>Arrival & Rental Fitting</h4>
-              <p>Arrive in Xi'an and head to the rental shop district near Yongningmen (South Gate) in the afternoon. Browse 3-4 shops to compare styles and prices. Get fitted for your Hanfu: the shop will help with sizing and hairstyling (30-60 minutes). Book a photographer for tomorrow if desired (400-800 RMB for a 2-hour session).</p>
-            </div>
-          </div>
-          <div class="step-row">
-            <span class="step-number-tinted">D2</span>
-            <div class="step-content-tinted">
-              <h4>City Wall & Tang Paradise</h4>
-              <p>Morning: arrive at the City Wall (Yongningmen entrance) by 8:30 AM. Walk or cycle in Hanfu along the wall with the old city on one side and modern Xi'an on the other. Best photos: the corner towers. Afternoon: Tang Paradise for Tang dynasty-themed gardens. Sunset: the Grand Tang Mall light show with your Hanfu on is unforgettable. Allow 2-3 hours for makeup touch-ups at the rental shop.</p>
-            </div>
-          </div>
-          <div class="step-row">
-            <span class="step-number-tinted">D3</span>
-            <div class="step-content-tinted">
-              <h4>Big Wild Goose Pagoda & Departure</h4>
-              <p>Morning: Big Wild Goose Pagoda and the surrounding square. The pagoda + reflection pool shot is a classic. Afternoon: return the Hanfu (most rentals are 24-hour) and explore the Muslim Quarter for street food. Depart Xi'an or continue to your next destination. Budget summary: 3 days including mid-range rental, hairstyling, and a photographer session: approximately 800-1,500 RMB ($110-210 USD) per person.</p>
-            </div>
-          </div>
+        <div style="text-align:center;margin-bottom:4rem;">
+          <a href="/travel" class="btn btn-primary">Read the Full City Guides</a>
         </div>
       </div>
     </section>
@@ -337,22 +372,39 @@ import SizeGuide from "../components/SizeGuide.astro";
     <!-- Where to Buy or Rent Hanfu -->
 <section id="buy" class="section-tinted" aria-labelledby="buy-heading">
       <div class="container">
-        <h2 id="buy-heading" style="margin-bottom: 1rem;">Where to Get Hanfu: Buy Before You Go or Rent There</h2>
-        <p class="section-subtitle" style="margin-bottom: 3rem;">Two paths to Hanfu: buy online before your trip for a custom fit, or rent at your destination for convenience. Here is everything you need to decide.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+          <h2 id="buy-heading" style="margin-bottom: 0;">Where to Get Hanfu</h2>
+        </div>
+        <p class="section-subtitle-lean">Two paths: buy online, or rent on arrival.</p>
+
+        <div class="media-card" style="margin-bottom: 2.5rem; grid-template-columns: 38% 62%;">
+          <div class="media-card-img">
+            <img src="/images/pexels-silk-chengdu.jpg" srcset="/images/opt/pexels-silk-chengdu-400w.webp 400w, /images/opt/pexels-silk-chengdu-600w.webp 600w" sizes="(max-width: 768px) 100vw, 420px" alt="Traditional Chinese architecture in Chengdu, Sichuan with Hanfu-appropriate street scene" width="1600" height="2400" loading="lazy">
+          </div>
+          <div class="media-card-body" style="display:flex;flex-direction:column;justify-content:center;">
+            <h3>Buy it online. Or rent in China.</h3>
+            <p>Two ways to get Hanfu. Prices below are all-in — no surprises.</p>
+            <div class="chip-row" style="margin-top:1rem;">
+              <span class="chip"><i class="fa-solid fa-cart-shopping"></i> Online 2–4 wks</span>
+              <span class="chip"><i class="fa-solid fa-map-pin"></i> Rent 100–300/day</span>
+            </div>
+          </div>
+        </div>
 
         <h3 style="font-family: var(--font-display); font-size: 1.125rem; font-weight: 500; margin-bottom: 1.5rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.06em;">Buy Online Before Your Trip</h3>
         <div class="grid-2" style="margin-bottom: 3rem;">
           <div class="buy-card-tinted">
-            <h3>Editor’s Picks</h3>
-            <p>Our curated selection of the finest Hanfu across all styles. Hanfu Story, NewMoonDance, and Nuwa Hanfu are trusted brands shipping internationally. Allow 2-4 weeks for delivery. These brands offer quality materials and historically informed designs with detailed size charts.</p>
+            <h3>Editor's Picks</h3>
+            <p>Hanfu Story, NewMoonDance, Nuwa Hanfu — ships worldwide in 2–4 weeks.</p>
           </div>
           <div class="buy-card-tinted">
             <h3>Budget-Friendly (Under $100)</h3>
-            <p>Entry-level cotton and polyester Hanfu from Etsy, AliExpress, and Taobao. Perfect for a first-time purchase before your trip. Expect 2-6 week delivery. Quality varies: read reviews carefully and always check material composition. A solid option for casual travel photos.</p>
+            <p>Etsy, AliExpress, Taobao — 2–6 week delivery. Read reviews first.</p>
           </div>
           <div class="buy-card-tinted">
             <h3>Premium & Custom-Made</h3>
-            <p>Pure silk, hand-embroidered Hanfu made to your measurements. For weddings, professional photography, and serious collectors. Production takes 2-6 months, so plan well ahead. These heirloom pieces last for decades and photograph beautifully.</p>
+            <p>Silk, hand-embroidered, made-to-measure. Plan 2–6 months.</p>
           </div>
         </div>
 
@@ -361,18 +413,18 @@ import SizeGuide from "../components/SizeGuide.astro";
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; font-size: 0.875rem; color: var(--color-muted);">
             <div style="padding: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-md);">
               <div style="font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-text); margin-bottom: 0.5rem;">Entry-Level</div>
-              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$40 - $80</div>
-              <p style="line-height: 1.5;">Cotton or polyester blends from online marketplaces. Machine-washable. Good for first-time buyers and casual travel photos.</p>
+              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$40 – $80</div>
+              <p style="line-height: 1.5;">Machine-washable cotton blends. Good first buy.</p>
             </div>
             <div style="padding: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-md);">
               <div style="font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-text); margin-bottom: 0.5rem;">Mid-Range</div>
-              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$100 - $300</div>
-              <p style="line-height: 1.5;">Better fabrics, detailed embroidery, historically informed cuts. Best value for regular use at festivals and photoshoots.</p>
+              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$100 – $300</div>
+              <p style="line-height: 1.5;">Better fabrics, real embroidery. Best value.</p>
             </div>
             <div style="padding: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-md);">
               <div style="font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--color-text); margin-bottom: 0.5rem;">Premium Custom</div>
-              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$500 - $2,000+</div>
-              <p style="line-height: 1.5;">Pure silk, hand-embroidered, museum-grade accuracy. Heirloom quality. Production takes 2-6 months.</p>
+              <div style="font-size: 1.5rem; font-weight: 600; color: var(--color-text); margin-bottom: 0.75rem;">$500 – $2,000+</div>
+              <p style="line-height: 1.5;">Pure silk, museum-grade. Heirloom pieces.</p>
             </div>
           </div>
         </div>
@@ -381,17 +433,18 @@ import SizeGuide from "../components/SizeGuide.astro";
         <div class="grid-2">
           <div class="buy-card-tinted">
             <h3>Rental Basics</h3>
-            <p>Most tourist cities have Hanfu rental shops near major attractions. Typical rental: 100-300 RMB ($14-42 USD) for 24 hours, including basic hairstyling. Deposit of 200-500 RMB required. Bring your passport as ID. Most shops have English-speaking staff or translation apps.</p>
+            <p>100–300 RMB (~$14–42) / 24h, hairstyling included. Deposit 200–500 RMB + passport.</p>
           </div>
           <div class="buy-card-tinted">
             <h3>Photography Packages</h3>
-            <p>Many rental shops offer photography add-ons: 300-800 RMB for a 1-2 hour session with a professional photographer, including 20-50 edited digital photos delivered within 24 hours via WeChat. Book 1-2 days ahead during peak seasons (spring and autumn).</p>
+            <p>300–800 RMB for 1–2 hrs, 20–50 edited photos in 24h. Book ahead in spring/autumn.</p>
           </div>
         </div>
 
         <div class="vs-card" style="margin-top: 2rem; background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08);">
-          <h3 style="font-size: 0.9375rem;">Sizing Tip for Travelers</h3>
-          <p style="font-size: 0.875rem; color: var(--color-muted);">Chinese sizing runs 1-2 sizes smaller than US/UK sizing. If buying online before your trip, measure your bust, waist, hips, and height in centimeters. Rental shops carry a wide range of sizes and will help with fitting. Most Hanfu uses sash-and-tie closures for adjustability, but shoulder and sleeve measurements are fixed.</p>
+          <h3 style="font-size: 0.9375rem;">Sizing Tip</h3>
+          <p style="font-size: 0.875rem; color: var(--color-muted);">Measure in centimeters — Chinese sizes run 1–2 smaller than US/UK.</p>
+          <p style="margin-top: 1rem;"><a href="/guides/sizing" class="btn btn-outline">Sizing Guide</a></p>
         </div>
       </div>
     </section>
@@ -402,48 +455,27 @@ import SizeGuide from "../components/SizeGuide.astro";
     <!-- Knowledge Library -->
     <section id="knowledge" class="section" aria-labelledby="knowledge-heading">
       <div class="container">
-        <h2 id="knowledge-heading" class="section-title">Hanfu Knowledge Library</h2>
-        <p class="section-subtitle" style="margin-bottom: 2.5rem;">Deepen your understanding with our guides covering history, fabrics, sizing, care, and more.</p>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-book-open"></i></span>
+          <h2 id="knowledge-heading" class="section-title" style="margin-bottom:0;">Hanfu Knowledge Library</h2>
+        </div>
+        <p class="section-subtitle-lean">History, fabrics, sizing, care, and etiquette — with real guide pages to dive into.</p>
         <div class="grid-2">
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#dynasties" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu History Timeline</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Trace Hanfu from the Yellow Emperor through the Han, Tang, Song, and Ming dynasties to the modern revival movement.</p>
-          </div>
+          <a href="/guides/history" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-landmark"></i></span><div><strong>Hanfu History Timeline</strong><span class="card-desc">From the Yellow Emperor's era through the Han–Ming dynasties to today's revival.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#dynasties" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu Color Meanings</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Red symbolizes joy and prosperity for weddings. Yellow was reserved for emperors. Blue represents spring growth, white signifies purity, and black embodies wisdom. Each dynasty favored distinct palettes reflecting the eras philosophy.</p>
-          </div>
+          <a href="/guides/colors" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-palette"></i></span><div><strong>Hanfu Color Meanings</strong><span class="card-desc">Red for joy, yellow for emperors — what each dynasty's palette signified.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#buy" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu Fabrics Guide</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Silk is the traditional standard: breathable, lustrous, and luxurious. Cotton and linen offer everyday comfort. Polyester blends are affordable and easy-care. Brocade, gauze, and ramie each serve specific styles and seasons.</p>
-          </div>
+          <a href="/guides/fabrics" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-shirt"></i></span><div><strong>Hanfu Fabrics Guide</strong><span class="card-desc">Silk, cotton, ramie, brocade, gauze — match the fabric to style and season.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#size-guide" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu Size Guide</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Chinese sizing runs 1-2 sizes smaller than US/UK. Measure your bust, waist, hips, and height in centimeters. Most Hanfu has adjustable sash-and-tie closures, but shoulder and sleeve measurements are fixed. Always consult the sellers chart.</p>
-          </div>
+          <a href="/guides/sizing" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-ruler-combined"></i></span><div><strong>Hanfu Size Guide</strong><span class="card-desc">Measure in centimeters — Chinese sizing runs 1–2 sizes smaller than US/UK.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#faq" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">How to Wash Hanfu</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Silk Hanfu requires hand-washing in cold water with mild detergent or professional dry cleaning. Cotton and polyester blends can use a gentle machine cycle in a mesh bag. Always air dry flat and iron on low heat with a pressing cloth.</p>
-          </div>
+          <a href="/guides/washing" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-soap"></i></span><div><strong>How to Wash Hanfu</strong><span class="card-desc">Hand-wash silk in cold water; gentle cycle in a mesh bag for blends.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#how-to-wear" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu Hairstyles</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Each dynasty had signature hairstyles: Tang women favored high buns with floral ornaments; Song women wore elegant low coils; Ming styles featured elaborate hair crowns and dangling hairpins (buyao). Modern Hanfu styling adapts these with contemporary techniques.</p>
-          </div>
+          <a href="/guides/hairstyles" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-brush"></i></span><div><strong>Hanfu Hairstyles</strong><span class="card-desc">High Tang buns, low Song coils, Ming crowns — matched to your dynasty.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#how-to-wear" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu Etiquette</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Always cross the collar right over left (left-over-right is for funerals). The sash should be tied neatly at the side or back, never dangling loosely. Remove shoes before stepping onto traditional mats. Choose colors appropriate to the occasion: bright for celebrations, subdued for solemn events.</p>
-          </div>
+          <a href="/guides/etiquette" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-hand-sparkles"></i></span><div><strong>Hanfu Etiquette</strong><span class="card-desc">Cross collars right over left, tie the sash neatly, dress for the occasion.</span></div></a>
 
-          <div class="vs-card" style="padding: 1.25rem;">
-            <h3 style="font-size: 1rem; margin-bottom: 0.25rem;"><a href="#buy" style="color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(196,46,46,0.2);">Hanfu for Beginners</a></h3>
-            <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.5;">Start with a simple modern Hanfu in cotton or linen. Ming dynasty styles are the most beginner-friendly with structured cuts and adjustable ties. Choose a versatile color like navy or soft pastel for your first piece. Budget $40-80 for a quality entry-level set.</p>
-          </div>
+          <a href="/buying/beginner" class="style-link"><span class="style-link-icon"><i class="fa-solid fa-circle-question"></i></span><div><strong>Hanfu for Beginners</strong><span class="card-desc">Start with cotton or linen modern Hanfu — Ming cuts are the friendliest.</span></div></a>
         </div>
       </div>
     </section>
@@ -451,7 +483,19 @@ import SizeGuide from "../components/SizeGuide.astro";
     <!-- FAQ -->
     <section id="faq" class="section" aria-labelledby="faq-heading">
       <div class="container-narrow">
-        <h2 id="faq-heading" style="margin-bottom: 3rem;">Frequently Asked Questions</h2>
+        <div class="section-head section-title-margin">
+          <span class="section-head-icon"><i class="fa-solid fa-circle-question"></i></span>
+          <h2 id="faq-heading" style="margin-bottom: 0;">Frequently Asked Questions</h2>
+        </div>
+        <p class="section-subtitle-lean" style="margin-bottom: 2.5rem;">Quick answers to the questions we hear most.</p>
+        <div class="image-band image-band-full" style="margin-bottom: 2.5rem;">
+        <img src="/images/pexels-tulou.jpg" srcset="/images/opt/pexels-tulou-400w.webp 400w, /images/opt/pexels-tulou-600w.webp 600w" sizes="100vw" alt="Historic Chinese Tulou roundhouse with red lanterns under a blue sky" width="1600" height="1067" loading="lazy">
+        <div class="image-band-caption">
+          <span class="band-kicker">FAQ</span>
+          <span class="band-title">Still curious? Quick answers below.</span>
+          <span class="band-sub">The 23 questions people ask most about Hanfu.</span>
+        </div>
+      </div>
         <div class="faq-list">
           <details class="faq-item">
             <summary>What is a Hanfu dress?
@@ -612,6 +656,7 @@ import SizeGuide from "../components/SizeGuide.astro";
             <div class="faq-answer">
               <p>Yes, children's Hanfu is widely available and popular for festivals, photo shoots, and cultural events. Kids' styles are often simplified with elastic waists and softer fabrics for comfort and ease of movement. Many families enjoy matching parent-child Hanfu sets.</p>
             </div>
+          </details>
           <details class="faq-item">
             <summary>Can I rent Hanfu when visiting China?
               <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -637,7 +682,6 @@ import SizeGuide from "../components/SizeGuide.astro";
             <div class="faq-answer">
               <p>Spring (March to May) and autumn (September to November) are ideal. Summer Hanfu should be lightweight cotton or linen; avoid heavy silk in hot weather. Winter Hanfu photography in northern cities requires thermal underlayers, but snowy scenes in Hangzhou or Harbin can be spectacular with the right preparation.</p>
             </div>
-          </details>
           </details>
         </div>
       </div>

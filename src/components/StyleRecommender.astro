@@ -1,5 +1,7 @@
 ---
 // Interactive Hanfu Style Recommender Quiz
+import "@fortawesome/fontawesome-free/css/fontawesome.min.css";
+import "@fortawesome/fontawesome-free/css/solid.min.css";
 ---
 
 <section class="section-tinted" aria-labelledby="quiz-heading" id="style-quiz">
@@ -27,28 +29,28 @@
     {
       question: "What is the main occasion?",
       options: [
-        { label: "Casual daily wear", value: "daily", icon: "☀️", desc: "Comfortable, modern, easy to style" },
-        { label: "Festival or special event", value: "festival", icon: "🎉", desc: "Stand out at celebrations" },
-        { label: "Photoshoot or cosplay", value: "photo", icon: "📸", desc: "Maximum visual impact" },
-        { label: "Wedding", value: "wedding", icon: "💒", desc: "Your special day in tradition" }
+        { label: "Casual daily wear", value: "daily", icon: "fa-solid fa-sun", desc: "Comfortable, modern, easy to style" },
+        { label: "Festival or special event", value: "festival", icon: "fa-solid fa-champagne-glasses", desc: "Stand out at celebrations" },
+        { label: "Photoshoot or cosplay", value: "photo", icon: "fa-solid fa-camera", desc: "Maximum visual impact" },
+        { label: "Wedding", value: "wedding", icon: "fa-solid fa-ring", desc: "Your special day in tradition" }
       ]
     },
     {
       question: "What is your style vibe?",
       options: [
-        { label: "Bold and dramatic", value: "bold", icon: "🔥", desc: "Turn heads, make a statement" },
-        { label: "Elegant and refined", value: "elegant", icon: "🌸", desc: "Subtle grace, timeless beauty" },
-        { label: "Structured and classic", value: "classic", icon: "🏛️", desc: "Clean lines, dignified presence" },
-        { label: "Easy and relaxed", value: "casual", icon: "🍃", desc: "Comfort first, effortless charm" }
+        { label: "Bold and dramatic", value: "bold", icon: "fa-solid fa-fire", desc: "Turn heads, make a statement" },
+        { label: "Elegant and refined", value: "elegant", icon: "fa-solid fa-fan", desc: "Subtle grace, timeless beauty" },
+        { label: "Structured and classic", value: "classic", icon: "fa-solid fa-landmark", desc: "Clean lines, dignified presence" },
+        { label: "Easy and relaxed", value: "casual", icon: "fa-solid fa-leaf", desc: "Comfort first, effortless charm" }
       ]
     },
     {
       question: "What is your budget?",
       options: [
-        { label: "Budget-friendly (under $50)", value: "low", icon: "💰", desc: "Great value entry-level pieces" },
-        { label: "Mid-range ($50 to $150)", value: "mid", icon: "💎", desc: "Quality fabrics and details" },
-        { label: "Premium ($150 plus)", value: "high", icon: "👑", desc: "Authentic silk, custom tailoring" },
-        { label: "No budget limit", value: "nolimit", icon: "✨", desc: "The finest craftsmanship available" }
+        { label: "Budget-friendly (under $50)", value: "low", icon: "fa-solid fa-sack-dollar", desc: "Great value entry-level pieces" },
+        { label: "Mid-range ($50 to $150)", value: "mid", icon: "fa-solid fa-gem", desc: "Quality fabrics and details" },
+        { label: "Premium ($150 plus)", value: "high", icon: "fa-solid fa-crown", desc: "Authentic silk, custom tailoring" },
+        { label: "No budget limit", value: "nolimit", icon: "fa-solid fa-wand-sparkles", desc: "The finest craftsmanship available" }
       ]
     }
   ];
@@ -126,7 +128,7 @@
     const q = quizData[idx];
     questionEl.innerHTML = '<h3 class="quiz-q-text">' + q.question + '</h3>';
     optionsEl.innerHTML = q.options.map(function(opt) {
-      return '<button class="quiz-option" data-value="' + opt.value + '"><span class="quiz-option-icon">' + opt.icon + '</span><span class="quiz-option-text"><strong>' + opt.label + '</strong><small>' + opt.desc + '</small></span></button>';
+      return '<button class="quiz-option" data-value="' + opt.value + '"><span class="quiz-option-icon"><i class="' + opt.icon + '"></i></span><span class="quiz-option-text"><strong>' + opt.label + '</strong><small>' + opt.desc + '</small></span></button>';
     }).join("");
 
     optionsEl.querySelectorAll(".quiz-option").forEach(function(btn) {

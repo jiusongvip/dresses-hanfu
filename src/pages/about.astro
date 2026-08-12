@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/global.css";
+---
+<Layout
+  title="About Us | Hanfu Dress Guide"
+  description="About the Hanfu Dress Guide: who we are, why we built the most complete English-language resource for traditional Chinese Hanfu dresses, and what we stand for."
+  canonicalUrl="https://dresses-hanfu.com/about"
+  breadcrumbs={[{ name: "About", url: "/about" }]}
+  articleSchema={{
+    datePublished: "2026-08-08",
+    dateModified: "2026-08-08",
+    author: { "@type": "Organization", "name": "Hanfu Dress Guide" }
+  }}
+>
+  <SiteHeader />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; About</p>
+          <h1>About Hanfu Dress Guide</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            We started Hanfu Dress Guide because quality Hanfu information was scattered across brand Instagram pages, Chinese forum threads, and TikTok videos — in fragments and often self-serving. We wanted one honest, complete, easy-to-use English resource.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+
+          <h2>What We Cover</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Style &amp; dynasty guides</strong> — Tang, Song, Ming, modern: the silhouettes, cultural context, and how to wear each correctly.</li>
+            <li><strong>Practical how-tos</strong> — hairstyles, fabric care, sizing across cross-collar and ru combinations, and etiquette.</li>
+            <li><strong>Responsible buying</strong> — where to buy, what authentic really means, per-price expectations, and the shops worth your money.</li>
+            <li><strong>Comparisons</strong> — Hanfu vs kimono, hanbok, qipao, and cheongsam: the honest differences, plainly explained.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">Our Principles</h2>
+          <div class="vs-card" style="margin-top:1rem;padding:1.75rem;">
+            <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;margin:0;">
+              <li><strong>Cultural accuracy first.</strong> We double-check dynasty facts, collar techniques, and fabric names — and correct errors openly when we're wrong.</li>
+              <li><strong>No paid promotion.</strong> We don't accept payment for listings or drop tags from brands we independently believe in.</li>
+              <li><strong>Good for beginners.</strong> A person wearing their first Hanfu should feel welcome, not overwhelmed by details.</li>
+            </ul>
+          </div>
+
+          <h2 style="margin-top:3rem;">Contact</h2>
+          <p class="text-muted">
+            Questions, corrections, or partnerships? Email us via the <a href="/legal/contact" style="color:var(--color-accent);">contact page</a>, or sign up for <a href="/newsletter" style="color:var(--color-accent);">the newsletter</a> to follow along.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Explore the Guide</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/guides" class="btn btn-outline">All Guides</a>
+              <a href="/buying" class="btn btn-outline">Buying Hanfu</a>
+              <a href="/comparisons" class="btn btn-outline">Comparisons</a>
+              <a href="/styles/song" class="btn btn-outline">Song Style</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter newsletter={false} />
+</Layout>

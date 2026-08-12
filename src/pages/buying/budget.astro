@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Budget Hanfu Under $100: What You Get"
+  description="Budget Hanfu under $100: what you can actually expect at each price point, what to avoid, and where to find the best value on a budget."
+  canonicalUrl="https://dresses-hanfu.com/buying/budget"
+  breadcrumbs={[{ name: "Buying", url: "/buying" }, { name: "Budget Hanfu", url: "/buying/budget" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/buying/where-to-buy" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/buying" style="color:var(--color-accent);">Buying</a> &rsaquo; Budget Hanfu</p>
+          <h1>Budget Hanfu Under $100: The Honest Guide</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Yes, you can get decent Hanfu for under $100 — but you need to know what you're paying for. Budget Hanfu trades fabric and handwork for accessibility. Here's how to spend your money well.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>What Under $100 Actually Gets You</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Price</th><th>Realistic Expectation</th></tr></thead>
+              <tbody>
+                <tr><td><strong>$20–$40</strong></td><td>Costume-grade cosplay; polyester; loose fit; thin fabric. Fine for a party, not for quality.</td></tr>
+                <tr><td><strong>$40–$70</strong></td><td>Decent entry set in cotton or a silk-like polyester; passable cut; wearable. The sweet spot for your first piece.</td></tr>
+                <tr><td><strong>$70–$100</strong></td><td>Better fabric, more accurate cut, sometimes silk-blend or better embroidery. Very good value on Taobao via an agent.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Where the Value Is</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Taobao via agent is the best value channel</strong> — Chinese studios undercut international retail by 30-50% for the same factory quality. (See <a href="/buying/where-to-buy" style="color:var(--color-accent);">where to buy</a> for the agent walkthrough.)</li>
+            <li><strong>Buy separates</strong> — a plain ruqun skirt + top is cheaper than a full multi-piece set. You can layer later.</li>
+            <li><strong>Cotton and blends over "silk"</strong> — at this price "silk" means polyester. A nice cotton piece wears better than a bad polyester one.</li>
+            <li><strong>NewMoonDance and good Etsy shops</strong> offer reasonable budget sets without the agent hassle.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">What to Avoid at Any Price</h2>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li>"One size fits all" listings on fashion sites — Hanfu needs real measurements.</li>
+            <li>Mystery fabric with no composition label.</li>
+            <li>Photos that are clearly stock/product mockups not real pieces.</li>
+            <li>Anything that claims "authentic silk" below about $60 for a full set.</li>
+          </ul>
+
+          <h2 style="margin-top:3rem;">Budget Doesn't Mean Costume</h2>
+          <p class="text-muted">
+            A well-chosen $60 cotton set, sized to your real measurements and worn with the collar crossed right over left, reads beautifully in photos and festivals. The look comes from correct cut and construction, not price. Start budget, learn the system, and upgrade a piece at a time. See <a href="/buying/beginner" style="color:var(--color-accent);">the beginner's guide</a> for the exact starter plan.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Level Up Your Buying</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/buying/where-to-buy" class="btn btn-outline">Where to Buy</a>
+              <a href="/buying/beginner" class="btn btn-outline">Beginner's Guide</a>
+              <a href="/buying/authentic" class="btn btn-outline">Authentic Hanfu</a>
+              <a href="/buying/best-brands" class="btn btn-outline">Best Brands</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

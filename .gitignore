@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # audit output
 hanfudressguide-com-audit/
+dresses-hanfu-audit/
+
+# local dev logs
+dev-server.log

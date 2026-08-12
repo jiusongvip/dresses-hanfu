@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Hanfu Fabrics: The Complete Fabric Guide"
+  description="The Hanfu fabric encyclopedia: silk (sha, ling, jin, luo), ramie, hemp, cotton, and modern blends. What each fabric feels like, what it's for, and how to choose by season and budget."
+  canonicalUrl="https://dresses-hanfu.com/guides/fabrics"
+  breadcrumbs={[{ name: "Guides", url: "/guides" }, { name: "Hanfu Fabrics", url: "/guides/fabrics" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/guides/how-to-wear" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/guides" style="color:var(--color-accent);">Guides</a> &rsaquo; Hanfu Fabrics</p>
+          <h1>Hanfu Fabrics: Silk, Ramie, Cotton, and Blends</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Fabric is the soul of Hanfu. Historically, silk was the mark of rank, ramie and hemp the cloth of the people, and cotton a later arrival. Today you can choose from the full spectrum — here's how to tell them apart and pick the right one for your budget and climate.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>The Big Three: Silk, Ramie, and Cotton</h2>
+
+          <h3 style="margin-top:2rem;">Silk (Si)</h3>
+          <p class="text-muted">
+            Silk (si) is the traditional standard and the most prestigious Hanfu fabric. It is breathable, lustrous, and drapes beautifully. Real silk is also the most expensive and the most delicate to care for. Silk comes in several weaves that matter for Hanfu:
+          </p>
+          <ul style="list-style:disc;padding-left:1.5rem;color:var(--color-muted);font-size:0.9375rem;line-height:1.8;">
+            <li><strong>Si (plain weave silk)</strong> — smooth and lightweight, the everyday silk for ru tops.</li>
+            <li><strong>Sha (gauze)</strong> — translucent, breathable silk used for summer pieces and the classic translucent outer robes. The signature of the Tang daxiu shan.</li>
+            <li><strong>Ling (twill silk)</strong> — diagonal weave, denser and heavier, with a subtle sheen; good for skirts.</li>
+            <li><strong>Luo (leno weave mesh)</strong> — an open, even ladder-like open weave, cooler than plain silk, prized in warmer climates.</li>
+            <li><strong>Jin (brocade)</strong> — a heavy, richly patterned weave that raises figures into the surface. Used for the most ornate formal and wedding garments.</li>
+            <li><strong>Qijue (crepe)</strong> — a slightly textured, lightweight silk with a matte finish, popular in modern Hanfu.</li>
+          </ul>
+          <p class="text-muted">
+            How to tell real silk: real silk burns with a smell like burnt hair and leaves a small hard bead; polyester melts into a plastic bead. Real silk also feels cool to the touch and warms quickly with body heat.
+          </p>
+
+          <h3 style="margin-top:2rem;">Ramie (Zhuma)</h3>
+          <p class="text-muted">
+            Ramie (zhuma) is a plant fiber similar to flax, and it was one of China's oldest and most important Hanfu fibers — used for most everyday historical clothing because silk was legally reserved for the privileged. Ramie is crisp, absorbent, and keeps you cool in summer, so it is ideal for hot-climate Hanfu. Its main drawbacks: it wrinkles easily and feels stiff until washed several times.
+          </p>
+
+          <h3 style="margin-top:2rem;">Hemp (Ma)</h3>
+          <p class="text-muted">
+            Hemp (ma) is often grouped with ramie as "ma". It is tough, durable, and breathable, and the oldest fiber evidence in Chinese archaeology. True hemp is now rarer in modern Hanfu than ramie, but it is still used in historical re-creation and in premium rustic styles.
+          </p>
+
+          <h3 style="margin-top:2rem;">Cotton (Mian)</h3>
+          <p class="text-muted">
+            Cotton only became common in China during the last few dynasties and is not a traditional Hanfu base — but it's the most comfortable and practical option for modern wear. Cotton Hanfu is soft, breathable, machine-washable, and inexpensive. It lacks silk's sheen, so it reads casual — perfect for everyday modern Hanfu (see <a href="/styles/modern" style="color:var(--color-accent);">Modern Hanfu</a>).
+          </p>
+
+          <h2 style="margin-top:3rem;">Fabric Blends: The Practical Middle Ground</h2>
+          <p class="text-muted">
+            Most Hanfu sold today is a blend: silk blended with cotton or rayon to reduce cost and add durability, or polyester-nylon blends that are wrinkle-resistant and easy to machine-wash. Blends are a legitimate choice — especially for travel and festival wear — as long as you read the material composition before buying and match your expectations.
+          </p>
+
+          <h2 style="margin-top:3rem;">Which Fabric Should You Choose?</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Situation</th><th>Recommended Fabric</th><th>Why</th></tr></thead>
+              <tbody>
+                <tr><td><strong>First Hanfu / everyday</strong></td><td>Cotton or cotton blend</td><td>Affordable, washable, comfortable</td></tr>
+                <tr><td><strong>Summer wear</strong></td><td>Ramie, luo, or sheer sha</td><td>Breathable and cool</td></tr>
+                <tr><td><strong>Festival / photoshoot</strong></td><td>Silk blend or polyester brocade</td><td>Color, drape, and budget balance</td></tr>
+                <tr><td><strong>Wedding / formal</strong></td><td>Full silk, jin brocade</td><td>The traditional benchmark</td></tr>
+                <tr><td><strong>Travel (pack/wear)</strong></td><td>Wrinkle-resistant blend</td><td>Low maintenance on the road</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Caring for Hanfu Fabrics</h2>
+          <p class="text-muted">
+            Silk needs gentle hand-washing or dry cleaning (see our full <a href="/guides/washing" style="color:var(--color-accent);">washing guide</a>). Ramie and hemp can be machine-washed on a gentle cycle. Cotton and most blends are the most forgiving. Whatever the fiber, cold water and air-drying flat keep colors and weave intact the longest.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">Keep Reading</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/guides/colors" class="btn btn-outline">Hanfu Colors</a>
+              <a href="/guides/washing" class="btn btn-outline">How to Wash Hanfu</a>
+              <a href="/guides/sizing" class="btn btn-outline">Size Guide</a>
+              <a href="/buying/where-to-buy" class="btn btn-outline">Where to Buy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>

@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/global.css";
+---
+<Layout
+  title="Hanfu vs Qipao: The Differences"
+  description="Hanfu vs qipao (cheongsam) compared: Hanfu is loose, layered, ancient; qipao is form-fitting and 20th-century. Learn the clear differences between the two Chinese dresses."
+  canonicalUrl="https://dresses-hanfu.com/comparisons/qipao"
+  breadcrumbs={[{ name: "Comparisons", url: "/comparisons" }, { name: "Hanfu vs Qipao", url: "/comparisons/qipao" }]}
+  articleSchema={{
+    datePublished: "2026-08-01",
+    dateModified: "2026-08-08",
+    author: { "@type": "Person", "name": "Hanfu Dress Guide Editorial Team" }
+  }}
+>
+  <SiteHeader active="/comparisons" />
+  <main>
+    <article>
+      <section class="section" style="padding-bottom: 2rem;">
+        <div class="container-narrow">
+          <p style="font-size:0.8125rem;color:var(--color-muted);margin-bottom:1rem;"><a href="/" style="color:var(--color-accent);">Home</a> &rsaquo; <a href="/comparisons" style="color:var(--color-accent);">Comparisons</a> &rsaquo; Hanfu vs Qipao</p>
+          <h1>Hanfu vs Qipao: Two Very Different Chinese Dresses</h1>
+          <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
+            Many Westerners assume the qipao (cheongsam) is "the" Chinese dress. In fact, Hanfu and qipao are almost entirely different garment traditions separated by about two thousand years. Here's how to tell them apart.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <h2>The Quick Answer</h2>
+          <p class="text-muted">
+            Hanfu is the loose, layered, flowing traditional dress of the Han people, worn from ancient times through the Ming dynasty — think cross-collars, wide sleeves, and sashes. The qipao is a form-fitting, 20th-century dress developed in Shanghai and influenced by the Manchu (Qing-era) robe, worn with a figure-hugging slit and Chinese frog-button closure. Same country, different eras, different bodies.
+          </p>
+
+          <h2 style="margin-top:3rem;">Side-by-Side Comparison</h2>
+          <div style="overflow-x:auto;">
+            <table class="size-ref-table" style="margin-top:1rem;">
+              <thead><tr><th>Feature</th><th>Hanfu</th><th>Qipao</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Era</strong></td><td>Ancient — from ~200 BCE through 1644 CE</td><td>1920s–1950s Shanghai</td></tr>
+                <tr><td><strong>Fit</strong></td><td>Loose, flowing, layered</td><td>Form-fitting, body-hugging silhouette</td></tr>
+                <tr><td><strong>Collar</strong></td><td>Cross-over, folds across the chest</td><td>Standing mandarin collar, often with frog buttons</td></tr>
+                <tr><td><strong>Closure</strong></td><td>Sash / wrap; no buttons</td><td>Frog (pipng) buttons running diagonally</td></tr>
+                <tr><td><strong>Sleeves</strong></td><td>Wide flowing, varies by dynasty</td><td>Slim or cap sleeves, or sleeveless</td></tr>
+                <tr><td><strong>Fabric</strong></td><td>Silk, gauze, ramie, cotton</td><td>Traditional silk, brocade; modern versions in any fabric</td></tr>
+                <tr><td><strong>History</strong></td><td>3,000+ years</td><td>A century (20th century)</td></tr>
+                <tr><td><strong>Shoes</strong></td><td>Embroidered flat cloth shoes</td><td>Heels, pumps, cheong-sam shoes</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 style="margin-top:3rem;">Why People Confuse Them</h2>
+          <p class="text-muted">
+            Both are Chinese, both silky, both associated with cultural identity for outsiders. But the qipao is a product of the 20th century the Republic of China era, quickly associated with old Shang movie stars. It represents a more modern, urban, Western-influenced Chinese femininity. Hanfu represents the broader ancient tradition. They share almost nothing structurally: qipao is tailored skin-tight and buttoned; Hanfu is loose, wrapped, and layered.
+          </p>
+
+          <h2 style="margin-top:3rem;">Cheongsam vs Qipao</h2>
+          <p class="text-muted">
+            "Cheongsam" and "qipao" are the same garment. Cheongsam is the Cantonese pronunciation, exported via Hong Kong and the Overseas community to the West; qipao is the Mandarin term (literally "banner gown," a reference to the Manchu banners). See our <a href="/comparisons/cheongsam" style="color:var(--color-accent);">Hanfu vs Cheongsam</a> page.
+          </p>
+
+          <div style="margin-top:3rem;padding:2rem;background:var(--color-accent-light);border-radius:var(--radius-md);">
+            <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">More Comparisons</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
+              <a href="/comparisons/kimono" class="btn btn-outline">Hanfu vs Kimono</a>
+              <a href="/comparisons/hanbok" class="btn btn-outline">Hanfu vs Hanbok</a>
+              <a href="/comparisons/cheongsam" class="btn btn-outline">Hanfu vs Cheongsam</a>
+              <a href="/comparisons" class="btn btn-outline">All Comparisons</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <SiteFooter />
+</Layout>
