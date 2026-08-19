@@ -5,52 +5,52 @@
 ## Site Structure
 
 ### Primary Pages
-- Home (Pillar): https://dresses-hanfu.com — Complete Hanfu guide covering all topics
-- Styles: https://dresses-hanfu.com/styles/tang | /styles/song | /styles/ming | /styles/modern | /styles/wedding | /styles/women | /styles/men | /styles/kids
-- Dynasties: https://dresses-hanfu.com/dynasty/han | /dynasty/tang | /dynasty/song | /dynasty/ming
-- Accessories: https://dresses-hanfu.com/accessories/hairpins | /accessories/fans | /accessories/shoes | /accessories/belts
+- Home (Pillar): https://www.dresses-hanfu.com — Complete Hanfu guide covering all topics
+- Styles: https://www.dresses-hanfu.com/styles/tang | /styles/song | /styles/ming | /styles/modern | /styles/wedding | /styles/women | /styles/men | /styles/kids
+- Dynasties: https://www.dresses-hanfu.com/dynasty/han | /dynasty/tang | /dynasty/song | /dynasty/ming
+- Accessories: https://www.dresses-hanfu.com/accessories/hairpins | /accessories/fans | /accessories/shoes | /accessories/belts
 
 ### Guides
-- Guides hub: https://dresses-hanfu.com/guides
-- Hanfu History: https://dresses-hanfu.com/guides/history
-- Hanfu Meaning: https://dresses-hanfu.com/guides/meaning
-- How to Wear Hanfu: https://dresses-hanfu.com/guides/how-to-wear
-- Hanfu Fabrics: https://dresses-hanfu.com/guides/fabrics
-- Hanfu Colors: https://dresses-hanfu.com/guides/colors
-- Hanfu Etiquette: https://dresses-hanfu.com/guides/etiquette
-- Hanfu Hairstyles: https://dresses-hanfu.com/guides/hairstyles
-- Washing & Care: https://dresses-hanfu.com/guides/washing
-- Hanfu Size Guide: https://dresses-hanfu.com/guides/sizing
-- Hanfu Accessories: https://dresses-hanfu.com/guides/accessories
+- Guides hub: https://www.dresses-hanfu.com/guides
+- Hanfu History: https://www.dresses-hanfu.com/guides/history
+- Hanfu Meaning: https://www.dresses-hanfu.com/guides/meaning
+- How to Wear Hanfu: https://www.dresses-hanfu.com/guides/how-to-wear
+- Hanfu Fabrics: https://www.dresses-hanfu.com/guides/fabrics
+- Hanfu Colors: https://www.dresses-hanfu.com/guides/colors
+- Hanfu Etiquette: https://www.dresses-hanfu.com/guides/etiquette
+- Hanfu Hairstyles: https://www.dresses-hanfu.com/guides/hairstyles
+- Washing & Care: https://www.dresses-hanfu.com/guides/washing
+- Hanfu Size Guide: https://www.dresses-hanfu.com/guides/sizing
+- Hanfu Accessories: https://www.dresses-hanfu.com/guides/accessories
 
 ### Buying
-- Buying hub: https://dresses-hanfu.com/buying
-- Where to Buy Hanfu: https://dresses-hanfu.com/buying/where-to-buy
-- Best Hanfu Brands: https://dresses-hanfu.com/buying/best-brands
-- Buying for Beginners: https://dresses-hanfu.com/buying/beginner
-- Authentic Hanfu: https://dresses-hanfu.com/buying/authentic
-- Budget Hanfu: https://dresses-hanfu.com/buying/budget
+- Buying hub: https://www.dresses-hanfu.com/buying
+- Where to Buy Hanfu: https://www.dresses-hanfu.com/buying/where-to-buy
+- Best Hanfu Brands: https://www.dresses-hanfu.com/buying/best-brands
+- Buying for Beginners: https://www.dresses-hanfu.com/buying/beginner
+- Authentic Hanfu: https://www.dresses-hanfu.com/buying/authentic
+- Budget Hanfu: https://www.dresses-hanfu.com/buying/budget
 
 ### Comparisons
-- Comparisons hub: https://dresses-hanfu.com/comparisons
-- Hanfu vs Kimono: https://dresses-hanfu.com/comparisons/kimono
-- Hanfu vs Hanbok: https://dresses-hanfu.com/comparisons/hanbok
-- Hanfu vs Qipao: https://dresses-hanfu.com/comparisons/qipao
-- Hanfu vs Cheongsam: https://dresses-hanfu.com/comparisons/cheongsam
+- Comparisons hub: https://www.dresses-hanfu.com/comparisons
+- Hanfu vs Kimono: https://www.dresses-hanfu.com/comparisons/kimono
+- Hanfu vs Hanbok: https://www.dresses-hanfu.com/comparisons/hanbok
+- Hanfu vs Qipao: https://www.dresses-hanfu.com/comparisons/qipao
+- Hanfu vs Cheongsam: https://www.dresses-hanfu.com/comparisons/cheongsam
 
 ### Supplemental
-- About: https://dresses-hanfu.com/about
-- Newsletter: https://dresses-hanfu.com/newsletter
-- Legal: https://dresses-hanfu.com/legal/contact | /legal/privacy | /legal/terms
+- About: https://www.dresses-hanfu.com/about
+- Newsletter: https://www.dresses-hanfu.com/newsletter
+- Legal: https://www.dresses-hanfu.com/legal/contact | /legal/privacy | /legal/terms
 
 ### Key Sections (on homepage)
-- https://dresses-hanfu.com/#styles — Explore Hanfu Styles
-- https://dresses-hanfu.com/#dynasties — Hanfu by Dynasty
-- https://dresses-hanfu.com/#how-to-wear — How to Wear Hanfu (5-step guide)
-- https://dresses-hanfu.com/#vs — Hanfu vs Kimono, Qipao, Hanbok
-- https://dresses-hanfu.com/#buy — Buying Guide & Pricing
-- https://dresses-hanfu.com/#travel — Hanfu City Guide (Xi'an, Hangzhou, Beijing, etc.)
-- https://dresses-hanfu.com/#faq — Frequently Asked Questions (15+ Q&A pairs)
+- https://www.dresses-hanfu.com/#styles — Explore Hanfu Styles
+- https://www.dresses-hanfu.com/#dynasties — Hanfu by Dynasty
+- https://www.dresses-hanfu.com/#how-to-wear — How to Wear Hanfu (5-step guide)
+- https://www.dresses-hanfu.com/#vs — Hanfu vs Kimono, Qipao, Hanbok
+- https://www.dresses-hanfu.com/#buy — Buying Guide & Pricing
+- https://www.dresses-hanfu.com/#travel — Hanfu City Guide (Xi'an, Hangzhou, Beijing, etc.)
+- https://www.dresses-hanfu.com/#faq — Frequently Asked Questions (15+ Q&A pairs)
 
 ## About This Site
 - Name: Hanfu Dress Guide

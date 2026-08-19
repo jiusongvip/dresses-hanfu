@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
- site: "https://dresses-hanfu.com",
- trailingSlash: "never",
+ site: "https://www.dresses-hanfu.com",
+ trailingSlash: "always",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

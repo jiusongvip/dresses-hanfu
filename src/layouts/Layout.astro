@@ -2,7 +2,7 @@
 const {
   title,
   description,
-  canonicalUrl = "https://dresses-hanfu.com",
+  canonicalUrl = "https://www.dresses-hanfu.com",
   imageUrl = "/images/hanfu-og.jpg",
   breadcrumbs = null,
   articleSchema = null,
@@ -10,7 +10,7 @@ const {
 } = Astro.props;
 const fullTitle = title ? title + " | Hanfu Guide" : "Traditional Chinese Hanfu: Complete 2026 Guide";
 const fullDescription = description || "Discover authentic Hanfu dresses: styles by dynasty, how-to-wear guides, outfit inspiration, and trusted buying recommendations. Your complete hanfu dress resource.";
-const baseUrl = Astro.site ?? "https://dresses-hanfu.com";
+const baseUrl = Astro.site ?? "https://www.dresses-hanfu.com";
 const fullImageUrl = imageUrl.startsWith("http") ? imageUrl : baseUrl + imageUrl;
 ---
 <!doctype html>

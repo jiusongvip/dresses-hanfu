@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://dresses-hanfu.com/sitemap-index.xml
+Sitemap: https://www.dresses-hanfu.com/sitemap-index.xml
