@@ -12,9 +12,11 @@ const faqSchema = JSON.stringify({
   "dateModified": LAST_UPDATED,
   "author": { "@type": "Organization", "name": "Hanfu Dress Guide", "url": "https://www.dresses-hanfu.com" },
   "citation": [
-    { "@type": "CreativeWork", "name": "Wikipedia — Hanfu", "url": "https://en.wikipedia.org/wiki/Hanfu" },
-    { "@type": "CreativeWork", "name": "China National Silk Museum", "url": "https://www.chinasilkmuseum.com/" },
-    { "@type": "CreativeWork", "name": "The Palace Museum", "url": "https://www.dpm.org.cn/home.html" },
+    { "@type": "CreativeWork", "name": "Kong Yingda, Chunqiu Zuozhuan Zhengyi — origin of the term Huaxia (华夏)", "url": "https://en.wikipedia.org/wiki/Zuo_zhuan" },
+    { "@type": "CreativeWork", "name": "Confucius, The Analects XIV — the right-over-left collar rule", "url": "https://en.wikipedia.org/wiki/Analects" },
+    { "@type": "CreativeWork", "name": "China National Silk Museum (Hangzhou) — textile and fabric research", "url": "https://www.chinasilkmuseum.com/" },
+    { "@type": "CreativeWork", "name": "The Palace Museum (Beijing) — Ming and Qing court dress collections", "url": "https://www.dpm.org.cn/home.html" },
+    { "@type": "CreativeWork", "name": "Wikipedia — Hanfu: dynasty overview and modern revival timeline", "url": "https://en.wikipedia.org/wiki/Hanfu" },
   ],
   "mainEntity": [
     {"@type":"Question","name":"What is a Hanfu dress?","acceptedAnswer":{"@type":"Answer","text":"Hanfu is the traditional clothing of the Han Chinese people, characterized by cross-collars, wide sleeves, and flowing robes layered with sashes. It spans over 3,000 years of history and is experiencing a global revival among enthusiasts of all backgrounds."}},
@@ -43,6 +45,7 @@ const howToSchema = JSON.stringify({
   "datePublished": "2026-08-01",
   "dateModified": LAST_UPDATED,
   "author": { "@type": "Organization", "name": "Hanfu Dress Guide", "url": "https://www.dresses-hanfu.com" },
+  "citation": { "@type": "CreativeWork", "name": "Confucius, The Analects XIV — 'Were it not for Guan Zhong, we would be folding our robes to the left'", "url": "https://en.wikipedia.org/wiki/Analects" },
   "step": [
     {
       "@type": "HowToStep",
@@ -133,6 +136,24 @@ const howToSchema = JSON.stringify({
           </div>
         </div>
       </div>
+
+      <div class="container" style="max-width:52rem;margin-top:3rem;">
+        <blockquote style="margin:0;padding:1.5rem 2rem;border-left:3px solid var(--color-accent);background:rgba(255,255,255,0.04);border-radius:0.75rem;">
+          <p style="margin:0;font-size:1.0625rem;line-height:1.7;font-family:var(--font-display);">&ldquo;The Middle Kingdom has the grandeur of rites and etiquette, hence it is called Xia; it has the beauty of robes and garments, hence it is called Hua.&rdquo;</p>
+          <p style="margin:0.5rem 0 0;font-size:0.9375rem;color:var(--color-muted);">&ldquo;中国有礼仪之大，故称夏；有服章之美，谓之华。&rdquo;</p>
+          <footer style="margin-top:1rem;font-size:0.8125rem;color:var(--color-muted);">
+            — Kong Yingda (孔颖达, 574&ndash;648 CE), <cite style="font-style:normal;">Chunqiu Zuozhuan Zhengyi</cite>, commentary on the <a href="https://en.wikipedia.org/wiki/Zuo_zhuan" rel="noopener" target="_blank" style="color:var(--color-accent);">Zuo Zhuan</a>. The origin of the phrase &ldquo;Huaxia&rdquo; (华夏) as China's poetic name.
+          </footer>
+        </blockquote>
+        <blockquote style="margin:1.25rem 0 0;padding:1.5rem 2rem;border-left:3px solid var(--color-accent);background:rgba(255,255,255,0.04);border-radius:0.75rem;">
+          <p style="margin:0;font-size:1.0625rem;line-height:1.7;font-family:var(--font-display);">&ldquo;Were it not for Guan Zhong, we would be wearing our hair unbound and folding our robes to the left.&rdquo;</p>
+          <p style="margin:0.5rem 0 0;font-size:0.9375rem;color:var(--color-muted);">&ldquo;微管仲，吾其被发左衽矣。&rdquo;</p>
+          <footer style="margin-top:1rem;font-size:0.8125rem;color:var(--color-muted);">
+            — Confucius, <a href="https://en.wikipedia.org/wiki/Analects" rel="noopener" target="_blank" style="color:var(--color-accent);"><cite style="font-style:normal;">The Analects</cite></a>, XIV. The right-over-left collar rule on this page traces back to this line.
+          </footer>
+        </blockquote>
+      </div>
+
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:1.5rem;">
         <span class="chip"><i class="fa-solid fa-rotate-left"></i> right-over-left collar</span>
         <span class="chip"><i class="fa-solid fa-shirt"></i> wide sleeves</span>
@@ -759,11 +780,12 @@ const howToSchema = JSON.stringify({
 
         <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--color-border);font-size:0.8125rem;color:var(--color-muted);">
           <p style="margin-bottom:0.5rem;font-weight:600;color:var(--color-text);">Sources &amp; Further Reading</p>
-          <p style="margin-bottom:0.75rem;">Historical facts and dynasty timelines on this page are cross-checked against museum and encyclopedic references:</p>
+          <p style="margin-bottom:0.75rem;">Quoted above: Kong Yingda's commentary on the Zuo Zhuan (the origin of &ldquo;Huaxia&rdquo;) and the Analects XIV (the right-over-left collar rule). Historical facts and dynasty timelines are cross-checked against museum and encyclopedic references:</p>
           <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.375rem;">
-            <li>1. <a href="https://en.wikipedia.org/wiki/Hanfu" rel="noopener" target="_blank" style="color:var(--color-accent);">Wikipedia — Hanfu</a>: dynasty overview and revival timeline.</li>
-            <li>2. <a href="https://www.chinasilkmuseum.com/" rel="noopener" target="_blank" style="color:var(--color-accent);">China National Silk Museum</a> (Hangzhou): textile and fabric research.</li>
-            <li>3. <a href="https://www.dpm.org.cn/home.html" rel="noopener" target="_blank" style="color:var(--color-accent);">The Palace Museum</a> (Beijing): Ming and Qing court dress collections.</li>
+            <li>1. <a href="https://en.wikipedia.org/wiki/Zuo_zhuan" rel="noopener" target="_blank" style="color:var(--color-accent);">Zuo Zhuan</a> &amp; <a href="https://en.wikipedia.org/wiki/Analects" rel="noopener" target="_blank" style="color:var(--color-accent);">The Analects</a> — primary classical sources quoted above.</li>
+            <li>2. <a href="https://en.wikipedia.org/wiki/Hanfu" rel="noopener" target="_blank" style="color:var(--color-accent);">Wikipedia — Hanfu</a>: dynasty overview and revival timeline.</li>
+            <li>3. <a href="https://www.chinasilkmuseum.com/" rel="noopener" target="_blank" style="color:var(--color-accent);">China National Silk Museum</a> (Hangzhou): textile and fabric research.</li>
+            <li>4. <a href="https://www.dpm.org.cn/home.html" rel="noopener" target="_blank" style="color:var(--color-accent);">The Palace Museum</a> (Beijing): Ming and Qing court dress collections.</li>
           </ul>
         </div>
       </div>
