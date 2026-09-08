@@ -10,8 +10,55 @@ const {
 } = Astro.props;
 const fullTitle = title ? title + " | Hanfu Guide" : "Traditional Chinese Hanfu: Complete 2026 Guide";
 const fullDescription = description || "Discover authentic Hanfu dresses: styles by dynasty, how-to-wear guides, outfit inspiration, and trusted buying recommendations. Your complete hanfu dress resource.";
-const baseUrl = Astro.site ?? "https://www.dresses-hanfu.com";
-const fullImageUrl = imageUrl.startsWith("http") ? imageUrl : baseUrl + imageUrl;
+const baseUrl = String(Astro.site ?? "https://www.dresses-hanfu.com").replace(/\/+$/, "");
+const fullImageUrl = imageUrl.startsWith("http")
+  ? imageUrl
+  : baseUrl + (imageUrl.startsWith("/") ? imageUrl : "/" + imageUrl);
+const websiteSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hanfu Dress Guide",
+  "url": baseUrl,
+  "description": "The most complete guide to traditional Chinese Hanfu dresses: styles, dynasties, how to wear, and where to buy.",
+});
+const organizationSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hanfu Dress Guide",
+  "url": baseUrl,
+  "logo": baseUrl + "/favicon.svg",
+  "sameAs": [
+    "https://pinterest.com/hanfudressguide",
+    "https://instagram.com/hanfudressguide"
+  ],
+});
+const breadcrumbSchema = breadcrumbs ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
+    ...breadcrumbs.map((b, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": b.name,
+      "item": b.url ? baseUrl + b.url : undefined,
+    })).filter(b => b.item),
+  ],
+}) : null;
+const articleSchemaJson = articleSchema ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title || "Hanfu Dress Guide",
+  "description": fullDescription,
+  "url": canonicalUrl,
+  ...articleSchema,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hanfu Dress Guide",
+    "url": baseUrl,
+    "logo": { "@type": "ImageObject", "url": baseUrl + "/favicon.svg" }
+  },
+}) : null;
 ---
 <!doctype html>
 <html lang="en">
@@ -49,75 +96,33 @@ const fullImageUrl = imageUrl.startsWith("http") ? imageUrl : baseUrl + imageUrl
   <!-- Canonical -->
   {!noindex && <link rel="canonical" href={canonicalUrl}>}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <!-- hreflang self-reference (single-locale site) -->
+  {!noindex && <link rel="alternate" hreflang="en" href={canonicalUrl}>}
+  {!noindex && <link rel="alternate" hreflang="x-default" href={canonicalUrl}>}
 
   <!-- Schema.org JSON-LD: WebSite -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Hanfu Dress Guide",
-      "url": baseUrl,
-      "description": "The most complete guide to traditional Chinese Hanfu dresses: styles, dynasties, how to wear, and where to buy."
-    }
-  </script>
+  <script type="application/ld+json" set:html={websiteSchema} />
 
   <!-- Schema.org JSON-LD: Organization -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Hanfu Dress Guide",
-      "url": baseUrl,
-      "logo": baseUrl + "/favicon.svg",
-      "sameAs": [
-        "https://pinterest.com/hanfudressguide",
-        "https://instagram.com/hanfudressguide"
-      ]
-    }
-  </script>
+  <script type="application/ld+json" set:html={organizationSchema} />
 
   <!-- Schema.org JSON-LD: BreadcrumbList -->
-  {breadcrumbs ? (
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl },
-          ...breadcrumbs.map((b, i) => ({
-            "@type": "ListItem",
-            "position": i + 2,
-            "name": b.name,
-            "item": b.url ? baseUrl + b.url : undefined,
-          })).filter(b => b.item),
-        ],
-      })}
-    </script>
-  ) : null}
+  {breadcrumbSchema && <script type="application/ld+json" set:html={breadcrumbSchema} />}
 
   <!-- Schema.org JSON-LD: Article -->
-  {articleSchema ? (
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": title || "Hanfu Dress Guide",
-        "description": fullDescription,
-        "url": canonicalUrl,
-        ...articleSchema,
-        "publisher": {
-          "@type": "Organization",
-          "name": "Hanfu Dress Guide",
-          "url": baseUrl,
-          "logo": { "@type": "ImageObject", "url": baseUrl + "/favicon.svg" }
-        }
-      })}
-    </script>
-  ) : null}
+  {articleSchemaJson && <script type="application/ld+json" set:html={articleSchemaJson} />}
+
+  <!-- Fonts: preconnect + async CSS (non render-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap"></noscript>
+
+  <!-- Font Awesome: async (icons are non-critical) -->
+  <link rel="preload" as="style" href="/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/vendor/fontawesome/css/fontawesome.min.css"></noscript>
 </head>
 <body>
   <slot />
