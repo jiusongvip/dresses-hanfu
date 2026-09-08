@@ -3,6 +3,79 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import StyleRecommender from "../components/StyleRecommender.astro";
 import SizeGuide from "../components/SizeGuide.astro";
+
+const LAST_UPDATED = "2026-09-08";
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "dateModified": LAST_UPDATED,
+  "author": { "@type": "Organization", "name": "Hanfu Dress Guide", "url": "https://www.dresses-hanfu.com" },
+  "citation": [
+    { "@type": "CreativeWork", "name": "Wikipedia — Hanfu", "url": "https://en.wikipedia.org/wiki/Hanfu" },
+    { "@type": "CreativeWork", "name": "China National Silk Museum", "url": "https://www.chinasilkmuseum.com/" },
+    { "@type": "CreativeWork", "name": "The Palace Museum", "url": "https://www.dpm.org.cn/home.html" },
+  ],
+  "mainEntity": [
+    {"@type":"Question","name":"What is a Hanfu dress?","acceptedAnswer":{"@type":"Answer","text":"Hanfu is the traditional clothing of the Han Chinese people, characterized by cross-collars, wide sleeves, and flowing robes layered with sashes. It spans over 3,000 years of history and is experiencing a global revival among enthusiasts of all backgrounds."}},
+    {"@type":"Question","name":"Can foreigners wear Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Hanfu is meant to be shared and appreciated. Many Hanfu communities worldwide welcome enthusiasts of all backgrounds, and cultural appreciation is encouraged when done respectfully."}},
+    {"@type":"Question","name":"Is Hanfu different from a kimono?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hanfu predates the kimono by centuries, using cross-collar wrapping and sash-secured robes with flowing sleeves. Kimonos feature a wide obi belt, T-shaped rectangular construction, and a more rigid silhouette."}},
+    {"@type":"Question","name":"What dynasty is Hanfu from?","acceptedAnswer":{"@type":"Answer","text":"Hanfu originates from the Han Dynasty (206 BCE-220 CE), but the term broadly covers traditional Han Chinese clothing from the Yellow Emperor era through the Ming Dynasty (1644 CE). Each dynasty developed distinct styles."}},
+    {"@type":"Question","name":"How much does Hanfu cost?","acceptedAnswer":{"@type":"Answer","text":"Entry-level Hanfu starts around $40-80 USD for simple cotton pieces. Mid-range sets range from $100-300 USD. Premium custom-made, historically accurate silk Hanfu can cost $500-2,000+ USD depending on craftsmanship."}},
+    {"@type":"Question","name":"Can Hanfu be worn daily?","acceptedAnswer":{"@type":"Answer","text":"Modern Hanfu (xin hanfu) is designed for everyday wear with simplified construction, comfortable breathable fabrics, and practical silhouettes. Traditional ceremonial Hanfu is better suited for festivals, weddings, and special occasions."}},
+    {"@type":"Question","name":"Where can I buy authentic Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Reputable sellers include Hanfu Story, NewMoonDance, Nuwa Hanfu, and curated Etsy shops. Always check reviews, material composition, and size charts before purchasing. For authentic Chinese sellers, Taobao and Xianyu offer the widest selection."}},
+    {"@type":"Question","name":"What size Hanfu should I get?","acceptedAnswer":{"@type":"Answer","text":"Hanfu sizing follows Chinese measurements, which often run smaller than Western sizes. Always measure your bust, waist, hips, and height, then consult the seller's specific size chart. Many Hanfu pieces are adjustable thanks to sash-and-tie construction."}},
+    {"@type":"Question","name":"How do I wash Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Silk Hanfu should be hand-washed in cold water with mild detergent or dry cleaned. Cotton and polyester-blend Hanfu can usually be machine-washed on a gentle cycle in a mesh bag. Always air dry flat and iron on low heat."}},
+    {"@type":"Question","name":"What accessories go with Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Traditional accessories include hairpins (zan), jade pendants, decorative fans, embroidered sachets, tassels, and waist ornaments. The choice depends on the dynasty style, occasion, and season."}},
+    {"@type":"Question","name":"What is the difference between Hanfu and Qipao?","acceptedAnswer":{"@type":"Answer","text":"Hanfu is loose-fitting, layered, and has roots stretching back thousands of years. Qipao (cheongsam) is a form-fitting, 20th-century dress originating in 1920s Shanghai, influenced by Manchu qizhuang clothing and Western tailoring techniques."}},
+    {"@type":"Question","name":"Can I wear Hanfu to a wedding?","acceptedAnswer":{"@type":"Answer","text":"Absolutely, Hanfu is becoming increasingly popular for weddings, both in China and internationally. Red is the traditional bridal color symbolizing joy and prosperity. Many couples now opt for Tang or Ming dynasty-style wedding Hanfu."}},
+    {"@type":"Question","name":"How to choose your first Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Start with a simple modern Hanfu (xin hanfu) in cotton or linen for everyday wear. Choose a versatile color like navy, black, or soft pastel. The Ming dynasty style is beginner-friendly because of its structured cuts and adjustable waist ties."}},
+    {"@type":"Question","name":"What is modern Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Modern Hanfu (xin hanfu or 'new Hanfu') adapts traditional Hanfu elements for contemporary life. It uses simplified cuts, machine-washable fabrics, and practical silhouettes that work with modern accessories while retaining the cross-collar and layered aesthetic."}},
+    {"@type":"Question","name":"Can I rent Hanfu when visiting China?","acceptedAnswer":{"@type":"Answer","text":"Yes, Hanfu rental shops are common in major tourist cities like Xi'an, Hangzhou, Beijing, Suzhou, Chengdu, and Luoyang. Rentals cost 100-300 RMB ($14-42 USD) per day and often include basic hairstyling. Many shops near scenic areas also offer full photography packages (300-800 RMB) with edited photos delivered within 24 hours."}}
+  ],
+});
+const howToSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Wear Hanfu",
+  "description": "A step-by-step guide to dressing in traditional Hanfu, from inner layers to final accessories.",
+  "inLanguage": "en",
+  "datePublished": "2026-08-01",
+  "dateModified": LAST_UPDATED,
+  "author": { "@type": "Organization", "name": "Hanfu Dress Guide", "url": "https://www.dresses-hanfu.com" },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Inner Layer (Zhongyi)",
+      "text": "Start with a white cotton or silk inner garment worn against the skin. Cross the collar right over left, securing it with an inner tie."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Main Robe (Aoqun or Ruqun)",
+      "text": "Layer the main outer garment. Always cross the collar right over left -- left over right is reserved for funerals in Chinese tradition."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Belt and Sash",
+      "text": "Secure the waist with a fabric sash or decorative belt. Silk ribbons or leather belts both work, depending on the dynasty style."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Accessories",
+      "text": "Add hairpins (zan), jade pendants, decorative fans, tassels, and other ornaments. Choose pieces that complement your chosen dynasty style."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Hair and Footwear",
+      "text": "Style hair in a traditional updo, braid, or half-up style. Finish with embroidered cloth shoes or boots."
+    }
+  ],
+});
 ---
 <Layout
   title="Traditional Chinese Hanfu: Complete 2026 Guide"
@@ -34,6 +107,7 @@ import SizeGuide from "../components/SizeGuide.astro";
           <div class="hero-content">
         <h1 id="hero-heading">Hanfu Dresses — The Complete Guide</h1>
             <p class="lead">Flowing robes, 3,000 years, &amp; one unforgettable look. Everything about traditional Chinese Hanfu — the visual way.</p>
+            <p style="font-size:0.8125rem;color:var(--color-muted);margin:1rem 0 0;">Curated and fact-checked by the <strong>Hanfu Dress Guide Editorial Team</strong> · Last updated <time datetime="2026-09-08">September 8, 2026</time></p>
             <div class="hero-cta-group">
               <a href="#styles" class="btn btn-primary">Explore Styles</a>
               <a href="#buy" class="btn btn-outline">Buying Guide</a>
@@ -246,35 +320,35 @@ import SizeGuide from "../components/SizeGuide.astro";
           <div class="step-row">
             <span class="step-number-tinted">1</span>
             <div class="step-content-tinted">
-              <h4>Inner Layer (Zhongyi)</h4>
+              <h3>Inner Layer (Zhongyi)</h3>
               <p>White cotton or silk base. Right over left.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">2</span>
             <div class="step-content-tinted">
-              <h4>Main Robe (Aoqun or Ruqun)</h4>
+              <h3>Main Robe (Aoqun or Ruqun)</h3>
               <p>Aoqun or ruqun. Right over left, always.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">3</span>
             <div class="step-content-tinted">
-              <h4>Belt and Sash</h4>
+              <h3>Belt and Sash</h3>
               <p>Tie it at the waist. That's the silhouette.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">4</span>
             <div class="step-content-tinted">
-              <h4>Accessories</h4>
+              <h3>Accessories</h3>
               <p>Hairpins, fans, jewelry. Match the dynasty.</p>
             </div>
           </div>
           <div class="step-row">
             <span class="step-number-tinted">5</span>
             <div class="step-content-tinted">
-              <h4>Hair and Footwear</h4>
+              <h3>Hair and Footwear</h3>
               <p>Updo + embroidered shoes. Crown for formal.</p>
             </div>
           </div>
@@ -682,75 +756,25 @@ import SizeGuide from "../components/SizeGuide.astro";
             </div>
           </details>
         </div>
+
+        <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--color-border);font-size:0.8125rem;color:var(--color-muted);">
+          <p style="margin-bottom:0.5rem;font-weight:600;color:var(--color-text);">Sources &amp; Further Reading</p>
+          <p style="margin-bottom:0.75rem;">Historical facts and dynasty timelines on this page are cross-checked against museum and encyclopedic references:</p>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.375rem;">
+            <li>1. <a href="https://en.wikipedia.org/wiki/Hanfu" rel="noopener" target="_blank" style="color:var(--color-accent);">Wikipedia — Hanfu</a>: dynasty overview and revival timeline.</li>
+            <li>2. <a href="https://www.chinasilkmuseum.com/" rel="noopener" target="_blank" style="color:var(--color-accent);">China National Silk Museum</a> (Hangzhou): textile and fabric research.</li>
+            <li>3. <a href="https://www.dpm.org.cn/home.html" rel="noopener" target="_blank" style="color:var(--color-accent);">The Palace Museum</a> (Beijing): Ming and Qing court dress collections.</li>
+          </ul>
+        </div>
       </div>
   </section>
 
+
   <!-- FAQPage Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type":"Question","name":"What is a Hanfu dress?","acceptedAnswer":{"@type":"Answer","text":"Hanfu is the traditional clothing of the Han Chinese people, characterized by cross-collars, wide sleeves, and flowing robes layered with sashes. It spans over 3,000 years of history and is experiencing a global revival among enthusiasts of all backgrounds."}},
-        {"@type":"Question","name":"Can foreigners wear Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Hanfu is meant to be shared and appreciated. Many Hanfu communities worldwide welcome enthusiasts of all backgrounds, and cultural appreciation is encouraged when done respectfully."}},
-        {"@type":"Question","name":"Is Hanfu different from a kimono?","acceptedAnswer":{"@type":"Answer","text":"Yes. Hanfu predates the kimono by centuries, using cross-collar wrapping and sash-secured robes with flowing sleeves. Kimonos feature a wide obi belt, T-shaped rectangular construction, and a more rigid silhouette."}},
-        {"@type":"Question","name":"What dynasty is Hanfu from?","acceptedAnswer":{"@type":"Answer","text":"Hanfu originates from the Han Dynasty (206 BCE-220 CE), but the term broadly covers traditional Han Chinese clothing from the Yellow Emperor era through the Ming Dynasty (1644 CE). Each dynasty developed distinct styles."}},
-        {"@type":"Question","name":"How much does Hanfu cost?","acceptedAnswer":{"@type":"Answer","text":"Entry-level Hanfu starts around $40-80 USD for simple cotton pieces. Mid-range sets range from $100-300 USD. Premium custom-made, historically accurate silk Hanfu can cost $500-2,000+ USD depending on craftsmanship."}},
-        {"@type":"Question","name":"Can Hanfu be worn daily?","acceptedAnswer":{"@type":"Answer","text":"Modern Hanfu (xin hanfu) is designed for everyday wear with simplified construction, comfortable breathable fabrics, and practical silhouettes. Traditional ceremonial Hanfu is better suited for festivals, weddings, and special occasions."}},
-        {"@type":"Question","name":"Where can I buy authentic Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Reputable sellers include Hanfu Story, NewMoonDance, Nuwa Hanfu, and curated Etsy shops. Always check reviews, material composition, and size charts before purchasing. For authentic Chinese sellers, Taobao and Xianyu offer the widest selection."}},
-        {"@type":"Question","name":"What size Hanfu should I get?","acceptedAnswer":{"@type":"Answer","text":"Hanfu sizing follows Chinese measurements, which often run smaller than Western sizes. Always measure your bust, waist, hips, and height, then consult the seller's specific size chart. Many Hanfu pieces are adjustable thanks to sash-and-tie construction."}},
-        {"@type":"Question","name":"How do I wash Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Silk Hanfu should be hand-washed in cold water with mild detergent or dry cleaned. Cotton and polyester-blend Hanfu can usually be machine-washed on a gentle cycle in a mesh bag. Always air dry flat and iron on low heat."}},
-        {"@type":"Question","name":"What accessories go with Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Traditional accessories include hairpins (zan), jade pendants, decorative fans, embroidered sachets, tassels, and waist ornaments. The choice depends on the dynasty style, occasion, and season."}},
-        {"@type":"Question","name":"What is the difference between Hanfu and Qipao?","acceptedAnswer":{"@type":"Answer","text":"Hanfu is loose-fitting, layered, and has roots stretching back thousands of years. Qipao (cheongsam) is a form-fitting, 20th-century dress originating in 1920s Shanghai, influenced by Manchu qizhuang clothing and Western tailoring techniques."}},
-        {"@type":"Question","name":"Can I wear Hanfu to a wedding?","acceptedAnswer":{"@type":"Answer","text":"Absolutely, Hanfu is becoming increasingly popular for weddings, both in China and internationally. Red is the traditional bridal color symbolizing joy and prosperity. Many couples now opt for Tang or Ming dynasty-style wedding Hanfu."}},
-        {"@type":"Question","name":"How to choose your first Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Start with a simple modern Hanfu (xin hanfu) in cotton or linen for everyday wear. Choose a versatile color like navy, black, or soft pastel. The Ming dynasty style is beginner-friendly because of its structured cuts and adjustable waist ties."}},
-        {"@type":"Question","name":"What is modern Hanfu?","acceptedAnswer":{"@type":"Answer","text":"Modern Hanfu (xin hanfu or 'new Hanfu') adapts traditional Hanfu elements for contemporary life. It uses simplified cuts, machine-washable fabrics, and practical silhouettes that work with modern accessories while retaining the cross-collar and layered aesthetic."}},
-        {"@type":"Question","name":"Can I rent Hanfu when visiting China?","acceptedAnswer":{"@type":"Answer","text":"Yes, Hanfu rental shops are common in major tourist cities like Xi'an, Hangzhou, Beijing, Suzhou, Chengdu, and Luoyang. Rentals cost 100-300 RMB ($14-42 USD) per day and often include basic hairstyling. Many shops near scenic areas also offer full photography packages (300-800 RMB) with edited photos delivered within 24 hours."}}
-      ]
-    }
-  </script>
+  <script type="application/ld+json" set:html={faqSchema} />
 
   <!-- HowTo Schema -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HowTo",
-      "name": "How to Wear Hanfu",
-      "description": "A step-by-step guide to dressing in traditional Hanfu, from inner layers to final accessories.",
-      "step": [
-        {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Inner Layer (Zhongyi)",
-          "text": "Start with a white cotton or silk inner garment worn against the skin. Cross the collar right over left, securing it with an inner tie."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Main Robe (Aoqun or Ruqun)",
-          "text": "Layer the main outer garment. Always cross the collar right over left -- left over right is reserved for funerals in Chinese tradition."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Belt and Sash",
-          "text": "Secure the waist with a fabric sash or decorative belt. Silk ribbons or leather belts both work, depending on the dynasty style."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Accessories",
-          "text": "Add hairpins (zan), jade pendants, decorative fans, tassels, and other ornaments. Choose pieces that complement your chosen dynasty style."
-        },
-        {
-          "@type": "HowToStep",
-          "position": 5,
-          "name": "Hair and Footwear",
-          "text": "Style hair in a traditional updo, braid, or half-up style. Finish with embroidered cloth shoes or boots."
-        }
-      ]
-    }
-  </script>
+  <script type="application/ld+json" set:html={howToSchema} />
 
   </main>
 
@@ -758,7 +782,7 @@ import SizeGuide from "../components/SizeGuide.astro";
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>Styles</h4>
+          <p class="footer-col-title">Styles</p>
           <ul>
             <li><a href="/styles/tang/">Tang Dynasty</a></li>
             <li><a href="/styles/song/">Song Dynasty</a></li>
@@ -768,7 +792,7 @@ import SizeGuide from "../components/SizeGuide.astro";
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Guides</h4>
+          <p class="footer-col-title">Guides</p>
           <ul>
             <li><a href="#how-to-wear">How to Wear Hanfu</a></li>
             <li><a href="#vs">Hanfu vs Kimono</a></li>
@@ -778,7 +802,7 @@ import SizeGuide from "../components/SizeGuide.astro";
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Buying</h4>
+          <p class="footer-col-title">Buying</p>
           <ul>
             <li><a href="#buy">Editor's Picks</a></li>
             <li><a href="#buy">Budget Hanfu</a></li>
@@ -788,9 +812,9 @@ import SizeGuide from "../components/SizeGuide.astro";
           </ul>
         </div>
         <div class="footer-col">
-          <h4>About</h4>
+          <p class="footer-col-title">About</p>
           <ul>
-            <li><a href="#travel">Travel Guide</a></li>
+            <li><a href="/about/">About Us</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="/legal/contact/">Contact</a></li>
             <li><a href="/legal/privacy/">Privacy Policy</a></li>
