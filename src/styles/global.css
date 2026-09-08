@@ -812,7 +812,7 @@ p + p { margin-top: 1rem; }
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-muted);
+  color: var(--color-dark-muted);
   margin: 0 0 1rem;
 }
 
@@ -835,8 +835,16 @@ p + p { margin-top: 1rem; }
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
   font-size: 0.875rem;
-  color: var(--color-muted);
+  color: var(--color-dark-muted);
 }
+
+/* 引语出处 / 参考文献外链：提亮 + 下划线（可读性 & affordance） */
+a.sources-link {
+  color: #b34a4a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a.sources-link:hover { color: var(--color-accent-hover); }
 
 /* ===== Hero ===== */
 .hero {

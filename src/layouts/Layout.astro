@@ -8,6 +8,7 @@ const {
   articleSchema = null,
   noindex = false,
 } = Astro.props;
+const headExtra = Astro.slots.render("head-extra");
 const fullTitle = title ? title + " | Hanfu Guide" : "Traditional Chinese Hanfu: Complete 2026 Guide";
 const fullDescription = description || "Discover authentic Hanfu dresses: styles by dynasty, how-to-wear guides, outfit inspiration, and trusted buying recommendations. Your complete hanfu dress resource.";
 const baseUrl = String(Astro.site ?? "https://www.dresses-hanfu.com").replace(/\/+$/, "");
@@ -95,6 +96,8 @@ const articleSchemaJson = articleSchema ? JSON.stringify({
 
   <!-- Canonical -->
   {!noindex && <link rel="canonical" href={canonicalUrl}>}
+
+  <Fragment set:html={headExtra} />
 
   <!-- hreflang self-reference (single-locale site) -->
   {!noindex && <link rel="alternate" hreflang="en" href={canonicalUrl}>}
