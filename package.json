@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npx astro build && node scripts/fix-sitemap-home.mjs",
+    "build": "npx astro build && node scripts/fix-sitemap-home.mjs && node scripts/inline-css.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "images:responsive": "node scripts/generate-responsive-images.mjs"
