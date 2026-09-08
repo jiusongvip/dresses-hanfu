@@ -33,10 +33,11 @@ const cards = [
 
       <section class="section" style="padding-top:0;">
         <div class="container">
+          <h2>Every Buying Guide</h2>
           <div class="grid-2" style="max-width:52rem;margin-inline:auto;">
             {cards.map((c) => (
               <a href={c.href} class="vs-card" style="display:block;">
-                <h2>{c.title}</h2>
+                <h3>{c.title}</h3>
                 <p>{c.desc}</p>
               </a>
             ))}
