@@ -5,8 +5,8 @@ import SiteFooter from "../../components/SiteFooter.astro";
 import "../../styles/global.css";
 ---
 <Layout
-  title="Hanfu vs Cheongsam: What's the Difference"
-  description="Hanfu vs cheongsam compared. Cheongsam is the western name for the qipao — a 20th-century fitted dress, completely different from ancient loose Hanfu."
+  title="Hanfu vs Qipao (Cheongsam): What's the Difference"
+  description="Hanfu vs qipao (cheongsam) compared: Hanfu is loose, layered and ancient; the qipao is a fitted 20th-century dress. Two names, one garment — the differences explained clearly."
   canonicalUrl="https://www.dresses-hanfu.com/comparisons/cheongsam/"
   breadcrumbs={[{ name: "Comparisons", url: "/comparisons" }, { name: "Hanfu vs Cheongsam", url: "/comparisons/cheongsam" }]}
   articleSchema={{
@@ -25,6 +25,21 @@ import "../../styles/global.css";
           <p class="lead" style="font-size:1.25rem;color:var(--color-muted);margin-top:1.5rem;line-height:1.55;">
             "Cheongsam" is simply the Cantonese name for the qipao — same garment, two names, one of which traveled West through Hong Kong. So comparing Hanfu and cheongsam means comparing the loose ancient Hanfu with the fitted modern qipao.
           </p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="container-narrow">
+          <div class="media-card" style="margin-bottom:2.5rem;">
+            <div class="media-card-img">
+              <img src="/images/qipao-unsplash.jpg" srcset="/images/opt/qipao-unsplash-200w.webp 200w, /images/opt/qipao-unsplash-400w.webp 400w, /images/opt/qipao-unsplash-600w.webp 600w" sizes="(max-width: 768px) 100vw, 440px" alt="Woman wearing a red qipao (cheongsam), the fitted 20th-century Chinese dress" width="687" height="1031" loading="lazy" decoding="async">
+            </div>
+            <div class="media-card-body" style="display:flex;flex-direction:column;justify-content:center;">
+              <p style="font-size:0.8125rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:0.5rem;">Qipao / Cheongsam</p>
+              <p style="font-size:1.375rem;font-weight:600;font-family:var(--font-display);margin:0;">One garment, two names.</p>
+              <p style="font-size:0.9375rem;color:var(--color-muted);margin-top:0.75rem;">The fitted 20th-century dress so often confused with Hanfu — here is how to tell them apart at a glance.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -63,7 +78,6 @@ import "../../styles/global.css";
             <p style="font-size:1rem;font-weight:500;font-family:var(--font-display);">More Comparisons</p>
             <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1rem;">
               <a href="/comparisons/kimono/" class="btn btn-outline">Hanfu vs Kimono</a>
-              <a href="/comparisons/qipao/" class="btn btn-outline">Hanfu vs Qipao</a>
               <a href="/comparisons/hanbok/" class="btn btn-outline">Hanfu vs Hanbok</a>
               <a href="/comparisons/" class="btn btn-outline">All Comparisons</a>
             </div>

@@ -1,0 +1,8 @@
+feat: add buying-page images; merge qipao->cheongsam (301); add travel city images
+
+- Insert media-card images on /buying/ (shop shelf), /buying/authentic/ (embroidery),
+  /buying/beginner/ (qixiong ruqun), /buying/best-brands/ (on-body)
+- 301 merge /comparisons/qipao/ -> /comparisons/cheongsam/; cheongsam kept as canonical
+  (GSC: cheongsam avg position 3.43 vs qipao 18.81); qipao.astro deleted, _redirects updated
+- Add travel media-card images for Luoyang / Suzhou / Xian
+- New image assets under public/images (jpg sources + 200/400/600w webp variants)
